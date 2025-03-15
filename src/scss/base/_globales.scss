@@ -71,3 +71,65 @@ video{
     width: 100%;
     aspect-ratio: 16/9;
 }
+
+
+
+.successful{
+    height: 100vh;
+    background: v.$white;
+    @media (min-width: v.$laptop){
+        padding-top: m.px-to-vw(100px);
+    }
+    @include m.laptop{
+        padding-top: 80px;
+    }
+    &_content{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(570px);
+        }
+        @include m.laptop{
+            max-width: 500px;
+        }
+        margin-inline: auto;
+
+        &>*{
+            text-align: center;
+        }
+    }
+    .content{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            margin-block: m.px-to-vw(48px);
+        }
+        @include m.laptop{
+            margin-block: 2.1rem;
+        }
+
+        &>*{
+            &:not(:last-child){
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(24px);
+                }
+                @include m.laptop{
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+    h1{
+        @include m.h2;
+    }
+    p{
+        @include m.subheadingP2(v.$secondary);
+        b, strong, span{
+            font-weight: 700;
+        }
+    }
+    a{
+        @include m.button;
+        margin-inline: auto;
+        background: v.$primary;
+        color: v.$white;
+    }
+}

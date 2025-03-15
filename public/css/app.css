@@ -400,6 +400,131 @@ video {
   aspect-ratio: 16/9;
 }
 
+.successful {
+  height: 100vh;
+  background: #ffffff;
+}
+@media (min-width: 1200px) {
+  .successful {
+    padding-top: 6.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .successful {
+    padding-top: 80px;
+  }
+}
+.successful_content {
+  width: 100%;
+  margin-inline: auto;
+}
+@media (min-width: 1200px) {
+  .successful_content {
+    max-width: 39.5833333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .successful_content {
+    max-width: 500px;
+  }
+}
+.successful_content > * {
+  text-align: center;
+}
+.successful .content {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .successful .content {
+    margin-block: 3.3333333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .successful .content {
+    margin-block: 2.1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .successful .content > *:not(:last-child) {
+    margin-bottom: 1.6666666667vw;
+  }
+}
+@media (max-width: 1200px) {
+  .successful .content > *:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+.successful h1 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .successful h1 {
+    font-size: 2.7777777778vw;
+    line-height: 3.3333333333vw;
+    letter-spacing: 2%;
+  }
+}
+@media (max-width: 1200px) {
+  .successful h1 {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+.successful p {
+  font-family: "Gotham";
+  color: #504F4F;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .successful p {
+    font-size: 1.1111111111vw;
+    line-height: 1.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .successful p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+.successful p b, .successful p strong, .successful p span {
+  font-weight: 700;
+}
+.successful a {
+  color: #080707;
+  font-family: "iCielGotham";
+  font-weight: 300;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  margin-inline: auto;
+  background: #080707;
+  color: #ffffff;
+}
+@media (min-width: 1200px) {
+  .successful a {
+    border: 0.0694444444vw solid #080707;
+    font-size: 1.1111111111vw;
+    padding: 0.8333333333vw 1.25vw;
+  }
+}
+@media (max-width: 1200px) {
+  .successful a {
+    border: 1px solid #080707;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+.successful a:is(:hover, :focus) {
+  background: #080707;
+  color: #ffffff;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }

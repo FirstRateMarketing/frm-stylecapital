@@ -1,3 +1,4 @@
+<?php if(!is_page('subscription-successful')): ?>
 <footer class="footer">
     <div class="container">
         <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo get_bloginfo('name'); ?>" class="footer_logo d-block w-100">
@@ -9,6 +10,7 @@
         </div>
     </div>
 </footer>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 

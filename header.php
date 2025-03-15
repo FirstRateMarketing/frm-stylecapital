@@ -26,6 +26,7 @@
             </div>
         </div>
     </header>
+    <?php if(!is_page('subscription-successful')): ?>
     <nav>
         <div class="header_bottom">
             <div class="container">
@@ -33,3 +34,4 @@
             </div>
         </div>
     </nav>
+    <?php endif; ?>
