@@ -1,0 +1,315 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin phone {
+    @media (max-width: v.$phone) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin tabletlg {
+    @media (max-width: v.$tabletlg) {
+        @content;
+    }
+}
+@mixin notebook {
+    @media (max-width: v.$notebook) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: v.$laptop) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (max-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (max-width: v.$pc) {
+        @content;
+    }
+}
+@mixin tv {
+    @media (max-width: v.$tv) {
+        @content;
+    }
+}
+
+@mixin transition($s: .3s) {
+    transition: all $s ease;
+}
+
+@mixin flex($prop, $gap){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: $prop;
+    gap: $gap;
+}
+
+@mixin grid($n, $gap){
+    display: grid;
+    grid-template-columns: repeat($n, 1fr);
+    grid-gap: $gap;
+}
+
+@mixin centerX{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin centerY{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin centerXY{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin fullWH{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin square($size){
+    display: block;
+    width: $size;
+    height: $size;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+}
+
+@mixin lines($n){
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@function px-to-vw($val) {
+    $num: calc($val / 1px);
+    $base: 1440;
+    $res: calc(($num / $base) * 100 * 1vw);
+    @return $res;
+}
+
+@mixin h1($color: v.$primary){
+    color: $color;
+    font-family: v.$sailing;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(48px);
+        line-height: px-to-vw(58px);
+    }
+    @include laptop{
+        font-size: 3rem;
+        line-height: 58px;    
+    }
+    letter-spacing: 2%;
+}
+
+@mixin h2($color: v.$primary){
+    color: $color;
+    font-family: v.$sailing;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(40px);
+        line-height: px-to-vw(48px);
+        letter-spacing: 2%;
+    }
+    @include laptop{
+        font-size: 2.25rem;
+        line-height: 48px;    
+    }
+}
+
+@mixin mb70{
+    @media (min-width: v.$laptop){
+        margin-bottom: px-to-vw(70px);
+    }
+    @include laptop{
+        margin-bottom: 50px;
+    }
+}
+
+@mixin h2center{
+    @include h2;
+    text-align: center;
+    @include mb70;
+}
+
+@mixin h3($color: v.$primary){
+    color: $color;
+    font-family: v.$sailing;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(32px);
+        line-height: px-to-vw(38px);
+        letter-spacing: 1%;
+    }
+    @include laptop{
+        font-size: 1.7rem;
+        line-height: 38px;
+    }
+}
+
+@mixin minih3($color: v.$primary){
+    color: $color;
+    font-family: v.$sailing;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(30px);
+        line-height: px-to-vw(36px);
+        letter-spacing: 1%;
+    }
+    @include laptop{
+        font-size: 1.55rem;
+        line-height: 36px;
+    }
+}
+
+@mixin h4($color: v.$primary){
+    color: $color;
+    font-family: v.$sailing;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(28px);
+        line-height: px-to-vw(34px);
+        letter-spacing: 1%;
+    }
+    @include laptop{
+        font-size: 1.25rem;
+        line-height: 34px;
+    }
+}
+
+@mixin h6($color: v.$primary){
+    font-family: v.$sailing;
+    color: $color;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(20px);
+        line-height: px-to-vw(24px);
+        letter-spacing: -1%;
+    }
+    @include laptop{
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@mixin h8($color: v.$primary){
+    font-family: v.$sailing;
+    color: $color;
+    text-transform: uppercase;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(16px);
+        line-height: px-to-vw(19px);
+        letter-spacing: 2%;
+    }
+    @include laptop{
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@mixin subheadingP1($color: v.$primary){
+    font-family: v.$gotham;
+    color: $color;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(18px);
+        line-height: px-to-vw(30px);
+        letter-spacing: -1%;
+    }
+    @include laptop{
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+@mixin subheadingP2($color: v.$primary){
+    font-family: v.$gotham;
+    color: $color;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(16px);
+        line-height: px-to-vw(28px);
+    }
+    @include laptop{
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@mixin subheadingP3($color: v.$primary){
+    font-family: v.$gotham;
+    color: $color;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(14px);
+        line-height: px-to-vw(26px);
+    }
+    @include laptop{
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+
+@mixin button{
+    color: v.$primary;
+    @media (min-width: v.$laptop){
+        border: px-to-vw(1px) solid v.$primary;
+        font-size: px-to-vw(16px);
+        padding: px-to-vw(12px) px-to-vw(18px);
+    }
+    @include laptop{
+        border: 1px solid v.$primary;
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+    font-family: v.$iciel;
+    font-weight: 300;
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    width: fit-content;
+    background: transparent;
+    &:is(:hover, :focus){
+        background: v.$primary;
+        color: v.$white;
+    }
+}
+
+@mixin pblock150{
+    position: relative;
+    @media (min-width: v.$laptop){
+        padding-block: px-to-vw(150px);
+    }
+    @include laptop{
+        padding-block: 116px;
+    }
+}
+
+@mixin pblock200{
+    position: relative;
+    @media (min-width: v.$laptop){
+        padding-block: px-to-vw(200px);
+    }
+    @include laptop{
+        padding-block: 200px;
+    }
+}

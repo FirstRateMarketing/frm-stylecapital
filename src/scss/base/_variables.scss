@@ -1,0 +1,42 @@
+// Fuentes
+@font-face {
+    font-family: 'SailingClub';
+    src: url(../../fonts/SailingClub/SailingClub-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'iCielGotham';
+    src: url(../../fonts/iCielGotham/iCielGothamMediumRegular.otf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../../fonts/Gotham/GothamLight.otf);
+    font-display: swap;
+}
+
+$sailing: 'SailingClub';
+$iciel: 'iCielGotham';
+$gotham: 'Gotham';
+
+
+// Medidas de Media Queries
+$phone: 480px;
+$tablet: 768px;
+$tabletlg: 942px;
+$notebook: 1024px;
+$laptop: 1200px;
+$desktop: 1400px;
+$pc: 1680px;
+$tv: 1900px;
+
+// Colores
+$white: #ffffff;
+$black: #000000;
+$primary: #080707;
+$secondary: #504F4F;
+$skyblue: #27F5E7;
+$red: #F52E26;
+$gray: #F2F0ED;

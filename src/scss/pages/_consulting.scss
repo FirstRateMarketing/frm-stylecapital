@@ -1,0 +1,149 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.hero{
+    &_consulting{
+        background: v.$gray;
+        @media (min-width: v.$laptop){
+            display: grid;
+            grid-template-columns: 1fr m.px-to-vw(690px);
+        }
+        @include m.laptop{
+            @include m.grid(2, 0);
+        }
+        &>*{
+            width: 100%;
+            @media (min-width: v.$laptop){
+                height: m.px-to-vw(800px);
+            }
+        }
+        &-content{
+            @media (min-width: v.$laptop){
+                padding-top: m.px-to-vw(200px);
+                padding-left: m.px-to-vw(134px);
+            }
+            @include m.laptop{
+                padding-top: 200px;
+                padding-left: 4%;
+            }
+            h1{
+                @include m.h1;
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(16px);
+                }
+                @include m.laptop{
+                    margin-bottom: 12px;
+                }
+            }
+            p{
+                @include m.subheadingP2(v.$secondary);
+                @media (min-width: v.$laptop){
+                    max-width: m.px-to-vw(349px);
+                }
+                @include m.laptop{
+                    max-width: 309px;
+                }
+            }
+        }
+        &-image{
+            img{
+                display: block;
+                width: 100%;
+                @media (min-width: v.$laptop){
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+        }
+    }
+}
+
+.experienced{
+    @include m.pblock200;
+    h2{
+        @include m.h2center;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(700px);
+        }
+        @include m.laptop{
+            max-width: 620px;
+        }
+        margin-inline: auto;
+    }
+    h3{
+        @include m.h3(v.$primary);
+    }
+    .container{
+        &>h3{
+            text-align: center;
+            @media (min-width: v.$laptop){
+                margin-top: m.px-to-vw(70px);
+            }
+            @include m.laptop{
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.experience{
+    @media (min-width: v.$laptop){
+        display: grid;
+        grid-template-columns: 1fr m.px-to-vw(544.25px);
+        align-items: center;
+
+    }
+    &:not(:last-child){
+        @media (min-width: v.$laptop){
+            padding-bottom: m.px-to-vw(32px);
+            border-bottom: m.px-to-vw(1px) solid rgba($color: #080707, $alpha: 0.1);
+            margin-bottom: m.px-to-vw(32px);
+        }
+        @include m.laptop{
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba($color: #080707, $alpha: 0.1);
+            margin-bottom: 24px;
+        }
+    }
+
+    &>*{
+        width: 100%;
+    }
+    h3{
+        @media (min-width: v.$laptop){
+            margin-bottom: m.px-to-vw(32px);
+        }
+        @include m.laptop{
+            margin-bottom: 26px;
+        }
+    }
+    &_content{
+        @media (min-width: v.$laptop){
+            padding-right: m.px-to-vw(80px);
+        }
+        @include m.laptop{
+            padding-right: 62px;
+        }
+        p{
+            @include m.subheadingP2(v.$secondary);
+            @media (min-width: v.$laptop){
+                margin-bottom: m.px-to-vw(24px);
+            }
+            @include m.laptop{
+                margin-bottom: 18px;
+            }
+        }
+    }
+    &_image{
+        @media (min-width: v.$laptop){
+            padding: m.px-to-vw(36.5px) m.px-to-vw(44.125px);
+        }
+        @include m.laptop{
+            
+        }
+        img{
+            width: 100%;
+        }
+    }
+}

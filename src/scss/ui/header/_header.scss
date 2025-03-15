@@ -1,0 +1,76 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.header, nav{
+    background: v.$white;
+}
+
+.header{
+    &>*{
+        width: 100%;
+    }
+    &_top{
+        @media (min-width: v.$laptop){
+            padding-block: m.px-to-vw(48px);
+        }
+        @include m.laptop{
+            padding-block: 2.5rem;
+        }
+    }
+    &_logo{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(896.94px);
+        }
+        @include m.laptop{
+         
+        }
+        margin-inline: auto;
+    }
+    &_bottom{
+        @media (min-width: v.$laptop){
+            border-block: m.px-to-vw(1px) solid rgba($color: v.$black, $alpha: 0.04);
+            padding-block: m.px-to-vw(10px);
+        }
+        @include m.laptop{
+            border-block: 1px solid rgba($color: v.$black, $alpha: 0.04);
+            padding-block: 6px;
+        }
+
+        ul{
+            list-style: none;  
+            @include m.flex(center, 0);
+        }
+        a{
+            font-weight: 300;
+            font-family: v.$iciel;
+            @include m.transition;
+            @media (min-width: v.$laptop){
+                font-size: m.px-to-vw(16px);
+                padding: m.px-to-vw(14px) m.px-to-vw(16px);
+            }
+            @include m.laptop{
+                font-size: 1rem;
+                padding: 14px 16px;
+            }
+            text-transform: uppercase;
+            color: v.$primary;
+
+            &:is(:hover, :focus){
+                opacity: 0.4;
+            }
+        }
+        .current_page_item{
+            a{
+                color: v.$red;
+            }
+        }
+    }
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    left: 0;
+}

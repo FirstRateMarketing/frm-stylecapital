@@ -1,0 +1,19 @@
+.accordionjs {
+    position: relative;
+    list-style: none;
+}
+
+.accordionjs .acc_section {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.accordionjs .acc_section .acc_head {
+    position: relative;
+    cursor: pointer;
+}
+
+.accordionjs .acc_section.acc_active>.acc_content {
+    display: block;
+}

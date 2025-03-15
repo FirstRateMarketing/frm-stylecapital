@@ -1,0 +1,41 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.footer{
+    @media (min-width: v.$laptop){
+        padding-block: m.px-to-vw(200px);
+    }
+    @include m.laptop{
+        padding-block: 160px;
+    }
+    &_logo{
+        width: 100%;
+        margin-inline: auto;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(287.02px);
+            margin-bottom: m.px-to-vw(41px);
+        }
+        @include m.laptop{
+            max-width: 247px;
+            margin-bottom: 34px;
+        }
+    }
+    &_credits{
+        &>*{
+            text-align: center;
+            &:not(:last-child){
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(10px);
+                }
+                @include m.laptop{
+                    margin-bottom: 7px;
+                }
+                @include m.subheadingP3();
+                font-weight: 600;
+            }
+            &:last-child{
+                @include m.subheadingP3(v.$secondary);
+            }
+        }
+    }
+}

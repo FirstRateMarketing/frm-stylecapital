@@ -1,0 +1,550 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.hero{
+    &_frontpage{
+        position: relative;
+        @media (min-width: v.$laptop){
+            padding-top: m.px-to-vw(100.5px);
+        }
+        @include m.laptop{
+            padding-top: 80px;
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 82%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: v.$skyblue;
+        }
+        .container{
+            position: relative;
+            z-index: 2;
+        }
+        &>*{
+            width: 100%;
+        }
+        &-title{
+            &>*{
+                text-align: center;
+            }
+            h1{
+                @include m.h1;
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(16px);
+                }
+                @include m.laptop{
+                    margin-bottom: 12px;
+                }
+            }
+            p{
+                @include m.subheadingP1;
+            }
+        }
+        &-image{
+            @media (min-width: v.$laptop){
+                margin-top: m.px-to-vw(70.5px);
+            }
+            @include m.laptop{
+                margin-top: 55px;
+            }
+
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+%h2{
+    @include m.h2center;
+}
+
+.most_important{
+    @media (min-width: v.$laptop){
+        padding-block: m.px-to-vw(200px) m.px-to-vw(131px);
+    }
+    @include m.laptop{
+        padding-block: 200px 131px;
+    }
+
+    h2{
+        @extend %h2;
+    }
+    &-grid{
+        @media (min-width: v.$laptop){
+            display: grid;
+            grid-template-columns: m.px-to-vw(629px) m.px-to-vw(550px);
+            grid-gap: m.px-to-vw(50px);
+        }
+        @include m.laptop{
+            @include m.grid(2, 30px);
+        }
+
+        img{
+            width: 100%;
+            aspect-ratio: 1/1;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .content{
+        @include m.subheadingP2(v.$secondary);
+        p{
+            &:not(:last-child){
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(24px);
+                }
+                @include m.laptop{
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+    &-content{
+        @media (min-width: v.$laptop){
+            padding-top: m.px-to-vw(70px);
+        }
+        @include m.laptop{
+            padding-top: 50px;
+        }
+
+        a{
+            @media (min-width: v.$laptop){
+                margin-top: m.px-to-vw(48px);
+            }
+            @include m.laptop{
+                margin-top: 40px;
+            }
+            @include m.button;
+        }
+    }
+    &-float{
+        position: relative;
+
+        @media (min-width: v.$laptop){
+            margin-top: m.px-to-vw(-166px);
+        }
+        @include m.laptop{
+            margin-top: -122px;
+        }
+        img{
+            display: block;
+            width: 100%;
+            aspect-ratio: 1/1;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            margin-inline: auto;
+            transform: scaleX(-1);
+
+            @media (min-width: v.$laptop){
+                max-width: m.px-to-vw(995px);
+            }
+            @include m.laptop{
+                max-width: 825px;
+            }
+        }
+    }
+    &-message{
+        position: absolute;
+        @include m.centerY;
+        right: 0;
+        background: #FAFBFB;
+
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(545px);
+            padding-block: m.px-to-vw(95.57px);
+            padding-inline: m.px-to-vw(50px) m.px-to-vw(32px);
+        }
+        @include m.laptop{
+            max-width: 490px;
+            padding-block: 72px;
+            padding-inline: 38px 26px;
+        }
+    }
+}
+
+%pblock150{
+    @include m.pblock150;
+}
+
+%pblock200{
+    @include m.pblock200;
+}
+
+.judgement, .monthly_edit{
+    @extend %pblock150;
+    h2{
+        @extend %h2;
+        margin-inline: auto;
+    }
+}
+
+.judgement{
+    background: v.$skyblue;
+    h2{
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(784px);
+        }
+        @include m.laptop{
+         
+        }
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+    &_grid{
+        @media (min-width: v.$laptop){
+            display: grid;
+            grid-template-columns: 1fr m.px-to-vw(580px);
+            grid-gap: m.px-to-vw(60px);
+            align-items: center;
+        }
+        @include m.laptop{
+            @include m.grid(2, 2rem);
+            align-items: center;
+        }
+    }
+}
+
+.clients{
+    position: relative;
+    @media (min-width: v.$laptop){
+        padding-top: m.px-to-vw(200px);
+    }
+    @include m.laptop{
+        padding-top: 200px;
+    }
+
+    h2{
+        @extend %h2;
+        text-align: left;
+    }
+    &_box{
+        width: 100%;
+    }
+    &_slider{
+        width: 100%;
+        /*@media (min-width: v.$laptop){
+            padding-left: m.px-to-vw(75px);
+        }
+        @include m.laptop{
+            padding-left: 4%;
+        }*/
+    }
+
+    .splide{
+        position: initial;
+        &__arrows{
+            position: absolute;
+            @media (min-width: v.$laptop){
+                top: m.px-to-vw(12px);
+                right: m.px-to-vw(76px);
+                @include m.flex(flex-end, m.px-to-vw(32px));
+            }
+            @include m.laptop{
+                top: 6px;
+                right: 4%;
+                @include m.flex(flex-end, 26px);
+            }
+        }
+        &__arrow{
+            position: relative !important;
+            inset: 0 !important;
+            transform: none !important;
+            width: auto !important;
+            height: auto !important;
+            background: none !important;
+            
+            font-family: v.$sailing;
+            font-weight: 400;
+            color: v.$primary;
+            @media (min-width: v.$laptop){
+                @include m.flex(center, m.px-to-vw(16px));
+                font-size: m.px-to-vw(30px);
+                letter-spacing: 2%;
+                line-height: m.px-to-vw(36px);
+            }
+            @include m.laptop{
+                @include m.flex(center, 12px);
+                font-size: 24px;
+                line-height: 32px;
+            }
+            svg{
+                transform: none !important;
+            }
+            &:disabled{
+                opacity: 0.5 !important;
+            }
+        }
+    }
+}
+
+.monthly_edit{
+    background: v.$gray;
+    &-head{
+        width: 100%;
+        margin-inline: auto;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(672px);
+            margin-bottom: m.px-to-vw(48px);
+        }
+        @include m.laptop{
+            max-width: 592px;
+            margin-bottom: 36px;
+        }
+        h2{
+            @media (min-width: v.$laptop){
+                margin-bottom: m.px-to-vw(16px);
+            }
+            @include m.laptop{
+                margin-bottom: 12px;
+            }
+        }
+        p{
+            @include m.subheadingP2(v.$secondary);
+            text-align: center;
+            b, strong, span{
+                font-family: v.$iciel;
+                font-weight: 500;
+                color: v.$primary;
+            }
+        }
+    }
+    &-body{
+        width: 100%;
+    }
+}
+
+%h3{
+    font-family: v.$sailing;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: m.px-to-vw(24px);
+        line-height: m.px-to-vw(29px);
+        letter-spacing: 1%;
+    }
+    @include m.laptop{
+        font-size: 22px;
+        line-height: 29px;
+    }
+}
+
+.clientbox{
+    background: v.$skyblue;
+    @media (min-width: v.$laptop){
+        width: m.px-to-vw(630px);
+        padding-block: m.px-to-vw(93.5px);
+        padding-inline: m.px-to-vw(64px) m.px-to-vw(40px);
+    }
+    @include m.laptop{
+        width: 550px;
+        padding-block: 70px;
+        padding-inline: 52px 30px;
+    }
+    img{
+        @include m.centerXY;
+        width: 100%;
+        display: block;
+        pointer-events: none;
+        z-index: 1;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(224px);
+        }
+        @include m.laptop{
+            max-width: 184px;
+        }
+    }
+
+    &-span{
+        position: absolute;
+        left: 0;
+        @include m.centerY;
+        writing-mode: vertical-lr;
+        display: inline-block;
+        text-orientation: mixed;
+        background: #F52E26;
+        @media (min-width: v.$laptop){
+            padding-block: m.px-to-vw(5px);
+            height: m.px-to-vw(280px);
+        }
+        @include m.laptop{
+            padding-block: 4px;
+            height: 260px;
+        }
+        p{
+            font-family: v.$iciel;
+            color: v.$white;
+            font-weight: 300;
+            color: v.$white;
+            text-transform: uppercase;
+            @media (min-width: v.$laptop){
+                font-size: m.px-to-vw(12px);
+            }
+            @include m.laptop{
+                font-size: 12px;
+            }
+        }
+    }
+    h3, p{
+        text-align: center;
+    }
+    h3{
+        @extend %h3;
+    }
+    &-title, &-description, &-author{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    &-title{
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(388px);
+            border-bottom: m.px-to-vw(1px) solid v.$primary;
+            padding-bottom: m.px-to-vw(24px);
+            margin-bottom: m.px-to-vw(24px);
+        }
+        @include m.laptop{
+            max-width: 326px;
+            border-bottom: 1px solid v.$primary;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        margin-inline: auto;
+    }
+    &-description{
+        opacity: 0.8;
+        p{
+            @include m.subheadingP3;
+        }
+    }
+    &-author{
+        @media (min-width: v.$laptop){
+            margin-top: m.px-to-vw(32px);
+        }
+        @include m.laptop{
+            margin-top: 26px;
+        }
+
+        p{
+            @extend %h3;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.colours, .portfolio{
+    @extend %pblock150;
+    h2{
+        @extend %h2;
+        margin-inline: auto;
+    }
+}
+
+.portfolio{
+    overflow: hidden;
+    h2{
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(774px);
+        }
+        @include m.laptop{
+            max-width: 700px;
+        }
+    }
+    &_grid{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            display: grid;
+            grid-template-columns: m.px-to-vw(523px) 1fr;
+            grid-gap: m.px-to-vw(208.03px);
+        }
+        @include m.laptop{
+            @include m.grid(2, 4rem);
+        }
+
+        &>*{
+            width: 100%;
+        }
+        img{
+            @media (min-width: v.$laptop){
+                width: calc(100% + m.px-to-vw(158px));
+            }
+            @include m.laptop{
+                width: 100%;
+            }
+        }
+        p{
+            @include m.subheadingP2;
+        }
+        h3{
+            @include m.h3;
+            @media (min-width: v.$laptop){
+                margin-bottom: m.px-to-vw(20px);
+            }
+            @include m.laptop{
+                margin-bottom: 16px;
+            }
+        }
+
+        &-left{
+            img{
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(74px);
+                }
+                @include m.laptop{
+                    margin-bottom: 48px;
+                }
+            }
+            p{
+                &:first-child{
+                    @media (min-width: v.$laptop){
+                        margin-bottom: m.px-to-vw(24px);
+                        padding-bottom: m.px-to-vw(24px);
+                        border-bottom: m.px-to-vw(1px) solid v.$primary;
+                    }
+                    @include m.laptop{
+                        margin-bottom: 18px;
+                        padding-bottom: 18px;
+                        border-bottom: 1px solid v.$primary;
+                    }
+                }
+            }
+        }
+        &-right{
+            img{
+                @media (min-width: v.$laptop){
+                    position: relative;
+                    z-index: 2;
+                    margin-left: m.px-to-vw(-158px);
+                    margin-top: m.px-to-vw(82px);
+                }
+                @include m.laptop{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+.colours{
+    h2{
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(500px);
+        }
+        @include m.laptop{
+            max-width: 450px;
+        }
+    }
+    &_tabs{
+
+    }
+}
