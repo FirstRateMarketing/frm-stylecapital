@@ -1,0 +1,244 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.contact{
+    background: v.$white;
+    @media (min-width: v.$laptop){
+        padding-top: m.px-to-vw(120px);
+    }
+    @include m.laptop{
+        padding-top: 90px;
+    }
+
+    h1{
+        @include m.h1;
+        @media (min-width: v.$laptop){
+            margin-bottom: m.px-to-vw(16px);
+        }
+        @include m.laptop{
+            margin-bottom: 12px;
+        }
+    }
+    h2{
+        @include m.h4;
+        @media (min-width: v.$laptop){
+            margin-bottom: m.px-to-vw(24px);
+        }
+        @include m.laptop{
+            margin-bottom: 18px;
+        }
+    }
+
+    &_info{
+        p{
+            @include m.subheadingP2(v.$secondary);
+        }
+        &>*{
+            &:not(:last-child){
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(80px);
+                }
+                @include m.laptop{
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+    &_grid{
+        @media (min-width: v.$laptop){
+            display: grid;
+            grid-template-columns: 1fr m.px-to-vw(890px);
+            grid-gap: m.px-to-vw(100px) 0;
+        }
+        @include m.laptop{
+            
+        }
+
+        &>*, img{
+            width: 100%;
+        }
+        img{
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+    &_form{
+        background: rgba($color: v.$skyblue, $alpha: 0.2);
+        @media (min-width: v.$laptop){
+            padding: m.px-to-vw(40px);
+        }
+        @include m.laptop{
+            padding: 2rem;
+        }
+    }
+    &_map{
+        @media (min-width: v.$laptop){
+            grid-column: span 2;
+        }
+        @include m.laptop{
+         
+        }
+    }
+}
+
+.gform{
+    &_fields{
+        column-gap: 0 !important;
+        @media (min-width: v.$laptop){
+            row-gap: m.px-to-vw(20px) !important;
+        }
+        @include m.laptop{
+            row-gap: 1rem !important;
+        }
+    }
+    &_wrapper{
+        background: v.$skyblue;
+        @media (min-width: v.$laptop){
+            padding: m.px-to-vw(48px) m.px-to-vw(38px);
+        }
+        @include m.laptop{
+            padding: 38px 29px;
+        }
+        .gfield{
+            border: none !important;
+            padding: 0 !important;
+            label{
+                @include m.subheadingP2;
+                @media (min-width: v.$laptop){
+                    margin: 0 0 m.px-to-vw(4px) 0 !important;
+                }
+                @include m.laptop{
+                    margin: 0 0 3px 0 !important;
+                }
+            }
+            &_required{
+                display: none !important;
+            }
+            legend, h3{
+                font-family: v.$iciel;
+                color: v.$black;
+                font-weight: 300;
+                text-align: center;
+                @media (min-width: v.$laptop){
+                    font-size: m.px-to-vw(18px);
+                    line-height: m.px-to-vw(30px);
+                    letter-spacing: -1%;
+                }
+                @include m.laptop{
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+                margin: 0 !important;
+            }
+
+            &_checkbox{
+                flex-direction: row !important;
+                justify-content: center !important;
+                @media (min-width: v.$laptop){
+                    gap: m.px-to-vw(20px) !important;
+                    padding-block: m.px-to-vw(20px) m.px-to-vw(28px) !important;
+                }
+                @include m.laptop{
+                    gap: 1rem !important;
+                    padding-block: 1rem 22px !important;
+                }
+            }
+        }
+
+        input:not([type="checkbox"], [type="submit"]), textarea{
+            background: rgba($color: v.$primary, $alpha: 0.06) !important;
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            @media (min-width: v.$laptop){
+                padding-inline: m.px-to-vw(22px) !important;
+            }
+            @include m.laptop{
+                padding-inline: 18px !important;
+            }
+
+            font-family: v.$gotham !important;
+            color: v.$primary !important;
+            font-weight: 400 !important;
+            @media (min-width: v.$laptop){
+                font-size: m.px-to-vw(16px) !important;
+                line-height: m.px-to-vw(28px) !important;
+                letter-spacing: 2%;
+            }
+            @include m.laptop{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &::placeholder{
+                opacity: 0.3;
+            }
+        }
+        input:not([type="checkbox"], [type="submit"]){
+            @media (min-width: v.$laptop){
+                height: m.px-to-vw(56px) !important;
+                min-height: m.px-to-vw(56px) !important;
+            }
+            @include m.laptop{
+                height: 48px !important;
+                min-height: 48px !important;
+            }
+        }
+        textarea{
+            @media (min-width: v.$laptop){
+                height: m.px-to-vw(218px) !important;
+                min-height: m.px-to-vw(218px) !important;
+                padding-block: m.px-to-vw(20px) !important;
+            }
+            @include m.laptop{
+                height: 180px !important;
+                min-height: 180px !important;
+                padding-block: 1rem !important;
+            }
+        }
+
+        .gchoice{
+            width: fit-content !important;
+            position: relative !important;
+            label{
+                margin: 0 !important;
+                color: v.$black !important;
+                @media (min-width: v.$laptop){
+                    padding: m.px-to-vw(10px) !important;
+                }
+                @include m.laptop{
+                    padding: 8px !important;
+                }
+                background: rgba($color: v.$primary, $alpha: 0.06) !important;
+            }
+            input{
+                position: absolute !important;
+                inset: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                opacity: 0 !important;
+
+                &:checked{
+                    &+label{
+                        background: v.$primary !important;
+                        color: v.$white !important;
+                    }
+                }
+            }
+        }
+    }
+    &_heading{
+        display: none !important;
+    }
+    &_footer{
+        @media (min-width: v.$laptop){
+            margin-top: m.px-to-vw(48px) !important;
+        }
+        @include m.laptop{
+            margin-top: 2.1rem !important;
+        }
+        [type="submit"]{
+            @include m.button(false);
+            margin-inline: auto !important;
+        }
+    }
+}

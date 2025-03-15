@@ -270,27 +270,54 @@
     }
 }
 
-@mixin button{
-    color: v.$primary;
-    @media (min-width: v.$laptop){
-        border: px-to-vw(1px) solid v.$primary;
-        font-size: px-to-vw(16px);
-        padding: px-to-vw(12px) px-to-vw(18px);
-    }
-    @include laptop{
-        border: 1px solid v.$primary;
-        font-size: 16px;
-        padding: 12px 18px;
-    }
-    font-family: v.$iciel;
-    font-weight: 300;
-    letter-spacing: 2%;
-    text-transform: uppercase;
-    width: fit-content;
-    background: transparent;
-    &:is(:hover, :focus){
-        background: v.$primary;
-        color: v.$white;
+@mixin button($link: true){
+
+    @if($link){
+        color: v.$primary;
+        @media (min-width: v.$laptop){
+            border: px-to-vw(1px) solid v.$primary;
+            font-size: px-to-vw(16px);
+            padding: px-to-vw(12px) px-to-vw(18px);
+        }
+        @include laptop{
+            border: 1px solid v.$primary;
+            font-size: 16px;
+            padding: 12px 18px;
+        }
+        font-family: v.$iciel;
+        font-weight: 300;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        width: fit-content;
+        background: transparent;
+        &:is(:hover, :focus){
+            background: v.$primary;
+            color: v.$white;
+        }
+    }@else{
+        color: v.$primary !important;
+        @media (min-width: v.$laptop){
+            border: px-to-vw(1px) solid v.$primary !important;
+            font-size: px-to-vw(16px) !important;
+            padding: px-to-vw(12px) px-to-vw(18px) !important;
+        }
+        @include laptop{
+            border: 1px solid v.$primary !important;
+            font-size: 16px !important;
+            padding: 12px 18px !important;
+        }
+        font-family: v.$iciel !important;
+        font-weight: 300 !important;
+        letter-spacing: 2% !important;
+        text-transform: uppercase !important;
+        border-radius: 0 !important;
+        width: fit-content !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        &:is(:hover, :focus){
+            background: v.$primary !important;
+            color: v.$white !important;
+        }
     }
 }
 

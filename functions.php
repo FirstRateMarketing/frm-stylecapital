@@ -32,6 +32,14 @@ if (!function_exists('general_scripts')):
             wp_register_script('accordionJS', JS . '/accordion.min.js', array('jquery'), '1.0.0', true);
             wp_enqueue_script('accordionJS');
         }
+
+        if (is_front_page()) {
+            wp_register_style('swiperCSS', CSS . '/swiper-bundle.min.css', '1.0.0', 'all');
+            wp_enqueue_style('swiperCSS');
+
+            wp_register_script('swiperJS', JS . '/swiper-bundle.min.js', array(), '1.0.0', true);
+            wp_enqueue_script('swiperJS');
+        }
     }
 endif;
 add_action('wp_enqueue_scripts', 'general_scripts');

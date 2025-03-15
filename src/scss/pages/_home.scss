@@ -56,6 +56,12 @@
             img{
                 display: block;
                 width: 100%;
+
+                @media (min-width: v.$laptop){
+                    height: m.px-to-vw(720px);
+                    object-fit: cover;
+                    object-position: center;
+                }
             }
         }
     }

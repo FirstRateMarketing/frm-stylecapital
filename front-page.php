@@ -13,7 +13,19 @@ get_header();
             <p>It gets you the things you want</p>
         </div>
         <div class="hero_frontpage-image">
-            <img src="<?php echo IMG; ?>/Hero.png">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="<?php echo IMG; ?>/Hero.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo IMG; ?>/Hero.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo IMG; ?>/Hero.png">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -155,3 +167,25 @@ get_header();
 </section>
 
 <?php get_footer(); ?>
+
+<script>
+    var swiper3 = new Swiper(".mySwiper", {
+        grabCursor: true,
+        effect: "creative",
+        centeredSlides: true,
+        rewind: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        creativeEffect: {
+            prev: {
+                shadow: true,
+                translate: ["0%", 0, -1],
+            },
+            next: {
+                translate: ["100%", 0, 0],
+            },
+        },
+    });
+</script>
