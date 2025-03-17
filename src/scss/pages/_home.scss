@@ -200,8 +200,20 @@
             max-width: m.px-to-vw(784px);
         }
         @include m.laptop{
-         
+            max-width: 700px;
         }
+    }
+    h3{
+        @include m.h3;
+    }
+    h4{
+        @include m.h4;
+    }
+    p{
+        @include m.subheadingP2(v.$primary);
+    }
+    a{
+        @include m.button;
     }
     img{
         display: block;
@@ -217,6 +229,33 @@
         @include m.laptop{
             @include m.grid(2, 2rem);
             align-items: center;
+        }
+    }
+    .content{
+        width: 100%;
+        &>*{
+            &:not(:last-child){
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(32px);
+                }
+                @include m.laptop{
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+    &-author{
+        @media (min-width: v.$laptop){
+            @include m.flex(flex-start, m.px-to-vw(10px));
+            margin-block: m.px-to-vw(48px) m.px-to-vw(60px);
+            padding-top: m.px-to-vw(48px);
+            border-top: m.px-to-vw(1px) solid v.$primary;
+        }
+        @include m.laptop{
+            @include m.flex(flex-start, 8px);
+            margin-block: 2rem 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid v.$primary;
         }
     }
 }
@@ -541,6 +580,33 @@
     }
 }
 
+%active{
+    background: v.$gray;
+    @media (min-width: v.$laptop){
+        height: m.px-to-vw(316px);
+    }
+    @include m.laptop{
+        
+    }
+
+    p{
+        opacity: 1;
+    }
+}
+
+%non_active{
+    @media (min-width: v.$laptop){
+        height: m.px-to-vw(204px);
+    }
+    @include m.laptop{
+        
+    }
+
+    p{
+        opacity: 0;
+    }
+}
+
 .colours{
     h2{
         @media (min-width: v.$laptop){
@@ -550,7 +616,124 @@
             max-width: 450px;
         }
     }
-    &_tabs{
+    span{
+        display: block;
+        @include m.h6;
+    }
+    p{
+        @include m.subheadingP2(v.$secondary);
+    }
+    h3{
+        @include m.h3;
 
+        @media (min-width: v.$laptop){
+            margin-block: m.px-to-vw(16px) m.px-to-vw(20px);
+        }
+        @include m.laptop{
+            margin-block: 12px 1.025rem;
+        }
+    }
+    .tab{
+        overflow: hidden;
+        cursor: pointer;
+        @include m.transition;
+        &>*{
+            @include m.transition;
+            pointer-events: none;
+        }
+        @media (min-width: v.$laptop){
+            padding-left: m.px-to-vw(48px);
+            padding-top: m.px-to-vw(48px);
+            padding-right: m.px-to-vw(111px);
+        }
+        @include m.laptop{
+            
+        }
+    }
+    &_images{
+        position: relative;
+        aspect-ratio: 1/1.01402;
+    }
+    .image, img{
+        @include m.fullWH;
+    }
+    .image{
+        position: absolute;
+        inset: 0;
+        @include m.transition;
+    }
+    img{
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &_content{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            display: grid;
+            grid-template-columns: m.px-to-vw(566px) 1fr;
+        }
+        @include m.laptop{
+            
+        }
+
+        &>*{
+            width: 100%;
+        }
+
+        &[data-state="1"]{
+            .tab{
+                &:nth-child(1){
+                    @extend %active;
+                }
+                &:nth-child(2), &:nth-child(3){
+                    @extend %non_active;
+                }
+            }
+            .image{
+                &:nth-child(1){
+                    opacity: 1;
+                }
+                &:nth-child(2), &:nth-child(3){
+                    opacity: 0;
+                }
+            }
+        }
+        &[data-state="2"]{
+            .tab{
+                &:nth-child(2){
+                    @extend %active;
+                }
+                &:nth-child(1), &:nth-child(3){
+                    @extend %non_active;
+                }
+            }
+            .image{
+                &:nth-child(2){
+                    opacity: 1;
+                }
+                &:nth-child(1), &:nth-child(3){
+                    opacity: 0;
+                }
+            }
+        }
+        &[data-state="3"]{
+            .tab{
+                &:nth-child(1), &:nth-child(2){
+                    @extend %non_active;
+                }
+                &:nth-child(3){
+                    @extend %active;
+                }
+            }
+            .image{
+                &:nth-child(3){
+                    opacity: 1;
+                }
+                &:nth-child(1), &:nth-child(2){
+                    opacity: 0;
+                }
+            }
+        }
     }
 }

@@ -59,9 +59,34 @@ get_header();
 <section class="colours">
     <div class="container">
         <h2>Here’s How We Identify the Colours and Styles That Suit You.</h2>
-        <div class="colours_tabs w-100">
-            <div class="tab">
-
+        <div class="colours_content" data-state="1">
+            <div class="colours_tabs w-100">
+                <div class="tab" data-nro="1">
+                    <span>01</span>
+                    <h3>Find your seasonal palette</h3>
+                    <p>Examining your skin tone against a selection of 150 coloured drapes, I determine your undertone, your seasonal palette, and then pinpoint your absolute knockout colours.</p>
+                </div>
+                <div class="tab" data-nro="2">
+                    <span>02</span>
+                    <h3>Discover your core style</h3>
+                    <p>We dig deep into your personality, preferences, body proportions and face shape to uncover your inherent style, aligning your wardrobe with your essence.</p>
+                </div>
+                <div class="tab" data-nro="3">
+                    <span>03</span>
+                    <h3>Curate a smart wardrobe</h3>
+                    <p>With your personalized colours and style in mind, we’ll build a wardrobe that works hard for you, ensuring every piece is an investment.</p>
+                </div>
+            </div>
+            <div class="colours_images w-100">
+                <div class="image">
+                    <img src="<?php echo IMG; ?>/20.jpg">
+                </div>
+                <div class="image">
+                    <img src="<?php echo IMG; ?>/21.jpg">
+                </div>
+                <div class="image">
+                    <img src="<?php echo IMG; ?>/22.jpg">
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +100,16 @@ get_header();
                 <img src="<?php echo IMG; ?>/3.jpg">
             </div>
             <div class="w-100">
-
+                <div class="content">
+                    <h3>We are wired to process visual data faster than any other kind.</h3>
+                    <p> Even if you don’t give your style a lot of thought, others around you are constantly processing whatever visual data you are sending out.</p>
+                    <p>It is crucial to get perception right, especially if you are early in your career, interviewing, on a date, or in a client-facing or investor-facing role. If your first impression doesn’t broadcast capable, trustworthy, talented, and confident, you’re unlikely to ever be perceived or treated like a leader later.</p>
+                </div>
+                <div class="judgement-author">
+                    <h4>You can never be overdressed or overeducated</h4>
+                    <p>— Oscar Wilde</p>
+                </div>
+                <a href="" title="find your power">find your power</a>
             </div>
         </div>
     </div>

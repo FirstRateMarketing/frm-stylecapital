@@ -26,4 +26,16 @@ import "@splidejs/splide/css";
         }).mount();
     }
 
+    let tabs = document.querySelectorAll('.tab'),
+        tabContent = document.querySelector('.colours_content');
+    if(tabs && tabContent){
+        Array.from(tabs).forEach(tab=>{
+            tab.addEventListener('click', (e)=>{
+                e.preventDefault();
+                let n = e.currentTarget.getAttribute('data-nro') ?? 1;
+                tabContent.setAttribute('data-state', n);
+            })
+        })
+    }
+
 })();
