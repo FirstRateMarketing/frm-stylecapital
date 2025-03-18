@@ -633,10 +633,20 @@
             margin-block: 12px 1.025rem;
         }
     }
+    a{
+        @include m.button;
+        margin-inline: auto;
+    }
     .tab{
         overflow: hidden;
         cursor: pointer;
         @include m.transition;
+        @media (min-width: v.$laptop){
+            border-bottom: m.px-to-vw(1px) solid #E2E8E8;
+        }
+        @include m.laptop{
+            border-bottom: 1px solid #E2E8E8;
+        }
         &>*{
             @include m.transition;
             pointer-events: none;
@@ -669,6 +679,7 @@
 
     &_content{
         width: 100%;
+        @include m.mb70;
         @media (min-width: v.$laptop){
             display: grid;
             grid-template-columns: m.px-to-vw(566px) 1fr;

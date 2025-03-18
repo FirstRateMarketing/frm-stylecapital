@@ -1531,10 +1531,49 @@ h1, h2, h3, h4, h5, h6 {
     margin-block: 12px 1.025rem;
   }
 }
+.colours a {
+  color: #080707;
+  font-family: "iCielGotham";
+  font-weight: 300;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  margin-inline: auto;
+}
+@media (min-width: 1200px) {
+  .colours a {
+    border: 0.0694444444vw solid #080707;
+    font-size: 1.1111111111vw;
+    padding: 0.8333333333vw 1.25vw;
+  }
+}
+@media (max-width: 1200px) {
+  .colours a {
+    border: 1px solid #080707;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+.colours a:is(:hover, :focus) {
+  background: #080707;
+  color: #ffffff;
+}
 .colours .tab {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+@media (min-width: 1200px) {
+  .colours .tab {
+    border-bottom: 0.0694444444vw solid #E2E8E8;
+  }
+}
+@media (max-width: 1200px) {
+  .colours .tab {
+    border-bottom: 1px solid #E2E8E8;
+  }
 }
 .colours .tab > * {
   transition: all 0.3s ease;
@@ -1568,6 +1607,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .colours_content {
   width: 100%;
+}
+@media (min-width: 1200px) {
+  .colours_content {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .colours_content {
+    margin-bottom: 50px;
+  }
 }
 @media (min-width: 1200px) {
   .colours_content {
@@ -2533,12 +2582,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 1200px) {
-  .open_to_you h2, .open_to_you h3, .wheel h2 {
+  .clothes_head h2, .open_to_you h2, .open_to_you h3, .wheel h2 {
     margin-bottom: 1.1111111111vw !important;
   }
 }
 @media (max-width: 1200px) {
-  .open_to_you h2, .open_to_you h3, .wheel h2 {
+  .clothes_head h2, .open_to_you h2, .open_to_you h3, .wheel h2 {
     margin-bottom: 12px !important;
   }
 }
@@ -3182,6 +3231,354 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.clothes .pagination-dot, .clothes .pagination {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .clothes .pagination-dot, .clothes .pagination {
+    height: 0.2777777778vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes .pagination-dot, .clothes .pagination {
+    height: 3px;
+  }
+}
+
+.clothe {
+  transition: all 0.3s ease;
+}
+@media (min-width: 1200px) {
+  .clothe {
+    width: 15.0902777778vw;
+  }
+}
+.clothe > * {
+  pointer-events: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+@media (min-width: 1200px) {
+  .clothe_image {
+    height: 41.6666666667vw;
+    margin-bottom: 0.8333333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothe_image {
+    height: 520px;
+    margin-bottom: 8px;
+  }
+}
+.clothe img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+  -o-object-position: top;
+     object-position: top;
+}
+.clothe_info {
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+}
+@media (min-width: 1200px) {
+  .clothe_info {
+    padding-left: 1.3888888889vw;
+    height: 5.5555555556vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothe_info {
+    padding-left: 1rem;
+    height: 62px;
+  }
+}
+.clothe:nth-child(1) .clothe_info {
+  background: linear-gradient(90deg, #238640 50%, #59AA32 50%);
+}
+.clothe:nth-child(2) .clothe_info {
+  background: linear-gradient(90deg, #009689 50%, #005C70 50%);
+}
+.clothe:nth-child(3) .clothe_info {
+  background: linear-gradient(90deg, #535E0E 50%, #A89A00 50%);
+}
+.clothe:nth-child(4) .clothe_info {
+  background: linear-gradient(90deg, #009669 50%, #005C39 50%);
+}
+
+@media (min-width: 1200px) {
+  .clothes [data-state="4"] .clothe:nth-child(4), .clothes [data-state="3"] .clothe:nth-child(3), .clothes [data-state="2"] .clothe:nth-child(2), .clothes [data-state="1"] .clothe:nth-child(1) {
+    width: 40.2777777778vw;
+  }
+}
+.clothes [data-state="4"] .clothe:nth-child(4) > *, .clothes [data-state="3"] .clothe:nth-child(3) > *, .clothes [data-state="2"] .clothe:nth-child(2) > *, .clothes [data-state="1"] .clothe:nth-child(1) > * {
+  opacity: 1;
+}
+
+.clothes {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .clothes {
+    padding-block: 13.8888888889vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes {
+    padding-block: 200px;
+  }
+}
+.clothes_head {
+  width: 100%;
+  margin-inline: auto;
+}
+@media (min-width: 1200px) {
+  .clothes_head {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes_head {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .clothes_head {
+    max-width: 52.0833333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes_head {
+    max-width: 670px;
+  }
+}
+.clothes_head > * {
+  text-align: center;
+}
+.clothes_head h2 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .clothes_head h2 {
+    font-size: 2.7777777778vw;
+    line-height: 3.3333333333vw;
+    letter-spacing: 2%;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes_head h2 {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .clothes_head h2 {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes_head h2 {
+    margin-bottom: 50px;
+  }
+}
+.clothes p {
+  font-family: "Gotham";
+  color: #080707;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .clothes p {
+    font-size: 1.1111111111vw;
+    line-height: 1.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+.clothes a {
+  color: #080707;
+  font-family: "iCielGotham";
+  font-weight: 300;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+}
+@media (min-width: 1200px) {
+  .clothes a {
+    border: 0.0694444444vw solid #080707;
+    font-size: 1.1111111111vw;
+    padding: 0.8333333333vw 1.25vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes a {
+    border: 1px solid #080707;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+.clothes a:is(:hover, :focus) {
+  background: #080707;
+  color: #ffffff;
+}
+@media (min-width: 1200px) {
+  .clothes a {
+    margin-top: 1.6666666667vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes a {
+    margin-top: 18px;
+  }
+}
+.clothes_body {
+  width: 100%;
+}
+.clothes_footer {
+  background: #F2F0ED;
+}
+@media (min-width: 1200px) {
+  .clothes_footer {
+    padding: 2.7777777778vw 1.9444444444vw;
+    display: grid;
+    grid-template-columns: 1fr 33.8888888889vw;
+    grid-gap: 9.3055555556vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes_footer {
+    padding: 2rem 20px;
+  }
+}
+.clothes_footer > * {
+  width: 100%;
+}
+.clothes .pagination {
+  position: relative;
+  background: #F0F3F3;
+}
+@media (min-width: 1200px) {
+  .clothes .pagination {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes .pagination {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .clothes .pagination {
+    border-radius: 0.2777777778vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes .pagination {
+    border-radius: 3px;
+  }
+}
+.clothes .pagination-dot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background: #080707;
+}
+@media (min-width: 1200px) {
+  .clothes .pagination-dot {
+    max-width: 11.1111111111vw;
+    border-radius: 0.1388888889vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes .pagination-dot {
+    max-width: 100px;
+    border-radius: 2px;
+  }
+}
+.clothes-box {
+  transition: all 0.3s ease;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .clothes-box {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes-box {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .clothes-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1111111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+.clothes h3 {
+  color: #ffffff;
+  font-family: "SailingClub";
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .clothes h3 {
+    font-size: 1.6666666667vw;
+    line-height: 2.0138888889vw;
+    letter-spacing: 2%;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes h3 {
+    font-size: 1.15rem;
+    line-height: 29px;
+  }
+}
+.clothes h4 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .clothes h4 {
+    font-size: 2.2222222222vw;
+    line-height: 2.6388888889vw;
+    letter-spacing: 1%;
+  }
+}
+@media (max-width: 1200px) {
+  .clothes h4 {
+    font-size: 1.7rem;
+    line-height: 38px;
+  }
+}
 .contact {
   background: #ffffff;
 }

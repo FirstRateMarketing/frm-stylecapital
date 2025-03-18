@@ -196,6 +196,21 @@
     }
 }
 
+@mixin minih4($color: v.$primary){
+    color: $color;
+    font-family: v.$sailing;
+    font-weight: 400;
+    @media (min-width: v.$laptop){
+        font-size: px-to-vw(24px);
+        line-height: px-to-vw(29px);
+        letter-spacing: 2%;
+    }
+    @include laptop{
+        font-size: 1.15rem;
+        line-height: 29px;
+    }
+}
+
 @mixin h6($color: v.$primary){
     font-family: v.$sailing;
     color: $color;

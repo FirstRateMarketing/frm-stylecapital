@@ -89,6 +89,7 @@ get_header();
                 </div>
             </div>
         </div>
+        <a href="#">learn more</a>
     </div>
 </section>
 

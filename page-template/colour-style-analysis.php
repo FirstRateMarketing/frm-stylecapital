@@ -45,6 +45,61 @@ get_header();
     </div>
 </section>
 
+<section class="clothes">
+    <div class="container">
+        <div class="clothes_head">
+            <h2>i find green is the easiest colour to see the difference between warm and cool shades. why?</h2>
+            <p>Because it is a mix of yellow, the primary warm colour, and blue, the primary cool colour.</p>
+        </div>
+        <div class="clothes_body" data-state="1">
+            <div class="pagination"><div class="pagination-dot"></div></div>
+            <div class="clothes-box">
+                <div class="clothe" data-nro="1">
+                    <div class="clothe_image">
+                        <img src="<?php echo IMG; ?>/clothe/1.png">
+                    </div>
+                    <div class="clothe_info">
+                        <h3>Spring Green</h3>
+                    </div>
+                </div>
+                <div class="clothe" data-nro="2">
+                    <div class="clothe_image">
+                        <img src="<?php echo IMG; ?>/clothe/2.png">
+                    </div>
+                    <div class="clothe_info">
+                        <h3>Summer Green</h3>
+                    </div>
+                </div>
+                <div class="clothe" data-nro="3">
+                    <div class="clothe_image">
+                        <img src="<?php echo IMG; ?>/clothe/3.png">
+                    </div>
+                    <div class="clothe_info">
+                        <h3>Autumn Green</h3>
+                    </div>
+                </div>
+                <div class="clothe" data-nro="4">
+                    <div class="clothe_image">
+                        <img src="<?php echo IMG; ?>/clothe/4.png">
+                    </div>
+                    <div class="clothe_info">
+                        <h3>Winter Green</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clothes_footer">
+            <div>
+                <h4>If you were mixing paints to make the Spring or Autumn greens above, you would add a higher proportion of yellow pigment. To make the Summer and Winter greens, you would instead add more blue pigment.</h4>
+            </div>
+            <div>
+                <p>To apply this simple art concept to your colour analysis, your skin has either a warm or a cool undertone. It is also either bright or soft in colour.  You will look harmonious and vibrant when the ‘adjacent colour’ (the clothing near your face) matches that undertone.  </p>
+                <a href="" title="book your colour analysis">book your colour analysis</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="case_studies">
     <div class="container">
         <h2>Case studies</h2>
