@@ -11,6 +11,9 @@
         @include m.laptop{
             @include m.grid(2, 0);
         }
+        @include m.tablet{
+            @include m.grid(1, 0);
+        }
         &>*{
             width: 100%;
             @media (min-width: v.$laptop){
@@ -25,6 +28,9 @@
             @include m.laptop{
                 padding-top: 200px;
                 padding-left: 4%;
+            }
+            @include m.tablet{
+                padding-block: 80px 50px;
             }
             h1{
                 @include m.h1;
@@ -101,9 +107,9 @@
             margin-bottom: m.px-to-vw(32px);
         }
         @include m.laptop{
-            padding-bottom: 24px;
+            padding-bottom: 40px;
             border-bottom: 1px solid rgba($color: #080707, $alpha: 0.1);
-            margin-bottom: 24px;
+            margin-bottom: 40px;
         }
     }
 
@@ -124,6 +130,14 @@
         }
         @include m.laptop{
             padding-right: 62px;
+        }
+        @include m.tablet{
+            padding-right: 0px;
+        }
+        .content {
+            @include m.tablet{
+                padding-bottom: 40px;
+            }
         }
         p{
             @include m.subheadingP2(v.$secondary);

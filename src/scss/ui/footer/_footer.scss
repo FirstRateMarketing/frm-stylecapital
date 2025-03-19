@@ -8,6 +8,9 @@
     @include m.laptop{
         padding-block: 160px;
     }
+    @include m.tablet{
+        padding-block: 80px;
+    }
     &_logo{
         width: 100%;
         margin-inline: auto;
@@ -18,6 +21,9 @@
         @include m.laptop{
             max-width: 247px;
             margin-bottom: 34px;
+        }
+        @include m.tablet{
+            max-width: 300px;
         }
     }
     &_credits{

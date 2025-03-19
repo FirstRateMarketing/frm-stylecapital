@@ -3,6 +3,9 @@
 
 .cta_banner{
     background: v.$skyblue;
+    @include m.tablet{
+        padding-block: 60px;
+    }
     &-grid{
         @media (min-width: v.$laptop){
             display: grid;

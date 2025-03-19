@@ -43,6 +43,9 @@
                 padding-top: 5rem;
                 padding-left: 4%;
             }
+            @include m.tabletlg{
+                padding-bottom: 2rem;
+            }
         }
         &-image{
             img{
@@ -76,6 +79,9 @@
     @include m.laptop{
         padding-block: 200px 50px;
     }
+    @include m.tabletlg{
+        padding-block: 100px 50px;
+    }
 
     h2{
         @include m.h2center;
@@ -97,6 +103,9 @@
     }
     @include m.laptop{
         padding-top: 200px;
+    }
+    @include m.tabletlg{
+        padding-top: 100px;
     }
     h2{
         @include m.h2center;
@@ -133,6 +142,9 @@
         }
         @include m.laptop{
             padding-inline: 2.1rem;
+        }
+        @include m.tablet{
+            padding-inline: 1rem;
         }
         div{
             width: 100%;
@@ -217,6 +229,9 @@
         @include m.laptop{
             padding-inline: 2.1rem;
         }
+        @include m.tabletlg{
+            padding-bottom: 40px;
+        }
     }
     &-nro{
         span{
@@ -255,6 +270,9 @@
     }
     @include m.laptop{
         padding-top: 200px;
+    }
+    @include m.tabletlg{
+        padding-top: 100px;
     }
     h2{
         @include m.h2center;
@@ -409,8 +427,8 @@
     @media (min-width: v.$laptop){
         width: m.px-to-vw(217.3px);
     }
-    @include m.laptop{
-        
+    @include m.tabletlg{
+        width: calc(50% - 20px);
     }
 
     @include m.transition;
@@ -794,8 +812,8 @@
                     object-fit: cover;
                     object-position: center;
                 }
-                @include m.laptop{
-                 
+                @include m.tabletlg{
+                    margin-bottom: 40px;
                 }
             }
         }
@@ -814,6 +832,9 @@
                 padding-right: 1rem;
             }
 
+            @include m.tabletlg{
+                margin-top: 40px;
+            }
             img{
                 @media (min-width: v.$laptop){
                     height: m.px-to-vw(780px);

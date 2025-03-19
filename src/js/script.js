@@ -21,6 +21,10 @@ import "@splidejs/splide/css";
                         left: '4%',
                         right: '4%',
                     },
+                },
+                768: {
+                    perPage: 1,
+                    autoWidth: false
                 }
             }
         }).mount();

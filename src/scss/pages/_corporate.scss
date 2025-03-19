@@ -10,6 +10,9 @@
         @include m.laptop{
             padding-block: 90px 70px;
         }
+        @include m.tablet{
+            padding-block: 80px 50px;
+        }
         h1{
             @include m.h1;
             text-align: center;
@@ -58,7 +61,10 @@
                 grid-gap: m.px-to-vw(63px);
             }
             @include m.laptop{
-                @include m.grid(2, 0);
+                @include m.grid(2, 1rem);
+            }
+            @include m.tablet{
+                @include m.grid(1, 0);
             }
 
             &>*{

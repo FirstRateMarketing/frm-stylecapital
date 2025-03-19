@@ -9,6 +9,9 @@
     @include m.laptop{
         padding-top: 90px;
     }
+    @include m.tablet{
+        padding-top: 80px;
+    }
 
     h1{
         @include m.h1;
@@ -33,6 +36,9 @@
         p{
             @include m.subheadingP2(v.$secondary);
         }
+        @include m.tablet{
+            padding-bottom: 50px;
+        }
         &>*{
             &:not(:last-child){
                 @media (min-width: v.$laptop){
@@ -40,6 +46,9 @@
                 }
                 @include m.laptop{
                     margin-bottom: 60px;
+                }
+                @include m.tablet{
+                    margin-bottom: 40px;
                 }
             }
         }
@@ -70,6 +79,11 @@
         @include m.laptop{
             padding: 2rem;
         }
+        @include m.tablet{
+            padding: 1rem;
+            margin-bottom: 40px;
+        }
+
     }
     &_map{
         @media (min-width: v.$laptop){
@@ -141,6 +155,21 @@
                 @include m.laptop{
                     gap: 1rem !important;
                     padding-block: 1rem 22px !important;
+                }
+                @include m.tablet{
+                    flex-wrap: wrap;
+                    gap: 8px !important;
+                }
+                .gchoice {
+                    @include m.tablet{
+                        display: block !important;
+                        width: calc(50% - 4px) !important;
+                    }
+                    label {
+                        @include m.tablet{
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }

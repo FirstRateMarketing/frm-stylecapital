@@ -78,6 +78,9 @@
     @include m.laptop{
         padding-block: 200px 131px;
     }
+    @include m.tabletlg{
+        padding-block: 80px 50px;
+    }
 
     h2{
         @extend %h2;
@@ -90,6 +93,9 @@
         }
         @include m.laptop{
             @include m.grid(2, 30px);
+        }
+        @include m.tablet{
+            @include m.grid(1, 0px);
         }
 
         img{
@@ -120,13 +126,19 @@
         @include m.laptop{
             padding-top: 50px;
         }
+        @include m.tabletlg{
+            padding-top: 40px;
+        }
 
         a{
             @media (min-width: v.$laptop){
                 margin-top: m.px-to-vw(48px);
             }
             @include m.laptop{
-                margin-top: 40px;
+                margin-top: 30px;
+            }
+            @include m.tablet{
+                margin-bottom: 40px;
             }
             @include m.button;
         }
@@ -139,6 +151,9 @@
         }
         @include m.laptop{
             margin-top: -122px;
+        }
+        @include m.tabletlg{
+            margin-top: 0px;
         }
         img{
             display: block;
@@ -155,6 +170,9 @@
             }
             @include m.laptop{
                 max-width: 825px;
+            }
+            @include m.tabletlg{
+                max-width: 700px;
             }
         }
     }
@@ -173,6 +191,12 @@
             max-width: 490px;
             padding-block: 72px;
             padding-inline: 38px 26px;
+        }
+        @include m.tablet{
+            position: initial;
+            transform: translateY(0);
+            padding-block: 50px;
+            padding-inline: 20px 16px;
         }
     }
 }
@@ -230,6 +254,9 @@
             @include m.grid(2, 2rem);
             align-items: center;
         }
+        @include m.tablet{
+            @include m.grid(1, 2rem);
+        }
     }
     .content{
         width: 100%;
@@ -268,10 +295,17 @@
     @include m.laptop{
         padding-top: 200px;
     }
-
+    @include m.tablet{
+        padding-top: 80px;
+    }
     h2{
         @extend %h2;
         text-align: left;
+    }
+    .container h2 {
+        @include m.tablet{
+            margin-bottom: 80px;
+        }
     }
     &_box{
         width: 100%;
@@ -299,6 +333,9 @@
                 top: 6px;
                 right: 4%;
                 @include m.flex(flex-end, 26px);
+            }
+            @include m.tablet{
+                top: 80px;
             }
         }
         &__arrow{
@@ -394,6 +431,9 @@
         width: 550px;
         padding-block: 70px;
         padding-inline: 52px 30px;
+    }
+    @include m.tablet{
+        width: 100%;
     }
     img{
         @include m.centerXY;
@@ -515,6 +555,9 @@
         @include m.laptop{
             @include m.grid(2, 4rem);
         }
+        @include m.tablet{
+            @include m.grid(1, 2rem);
+        }
 
         &>*{
             width: 100%;
@@ -608,6 +651,9 @@
 }
 
 .colours{
+    @include m.tablet{
+        padding-block: 0px 80px;
+    }
     h2{
         @media (min-width: v.$laptop){
             max-width: m.px-to-vw(500px);
@@ -646,7 +692,9 @@
         }
         @include m.laptop{
             border-bottom: 1px solid #E2E8E8;
+            padding: 20px;
         }
+
         &>*{
             @include m.transition;
             pointer-events: none;
@@ -685,7 +733,11 @@
             grid-template-columns: m.px-to-vw(566px) 1fr;
         }
         @include m.laptop{
-            
+            display: grid;
+            grid-template-columns: m.px-to-vw(566px) 1fr;
+        }
+        @include m.tablet{
+            display: block;
         }
 
         &>*{
