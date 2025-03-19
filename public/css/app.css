@@ -3498,6 +3498,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
   left: 0;
   background: #080707;
+  transition: all 0.3s ease;
 }
 @media (min-width: 1200px) {
   .clothes .pagination-dot {
@@ -3579,6 +3580,420 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 38px;
   }
 }
+@media (min-width: 1200px) {
+  .clothes [data-state="2"] .pagination-dot {
+    left: 31.25vw;
+  }
+}
+@media (min-width: 1200px) {
+  .clothes [data-state="3"] .pagination-dot {
+    left: 46.5277777778vw;
+  }
+}
+@media (min-width: 1200px) {
+  .clothes [data-state="4"] .pagination-dot {
+    left: calc(100% - 11.1111111111vw);
+  }
+}
+@media (max-width: 1200px) {
+  .clothes [data-state="4"] .pagination-dot {
+    left: calc(100% - 100px);
+  }
+}
+
+.yourself {
+  position: relative;
+  background: #27F5E7;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .yourself {
+    padding-block: 10.4166666667vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself {
+    padding-block: 116px;
+  }
+}
+.yourself h2 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .yourself h2 {
+    font-size: 2.7777777778vw;
+    line-height: 3.3333333333vw;
+    letter-spacing: 2%;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself h2 {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .yourself h2 {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself h2 {
+    margin-bottom: 50px;
+  }
+}
+.yourself .absolute {
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  .yourself .absolute {
+    max-width: 25.9625vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself .absolute {
+    max-width: 300px;
+  }
+}
+.yourself .container {
+  position: relative;
+  z-index: 3;
+}
+.yourself h3 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .yourself h3 {
+    font-size: 1.9444444444vw;
+    line-height: 2.3611111111vw;
+    letter-spacing: 1%;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself h3 {
+    font-size: 1.25rem;
+    line-height: 34px;
+  }
+}
+.yourself p {
+  font-family: "Gotham";
+  color: #080707;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .yourself p {
+    font-size: 1.1111111111vw;
+    line-height: 1.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  .yourself .mb60 {
+    margin-bottom: 4.1666666667vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself .mb60 {
+    margin-bottom: 42px;
+  }
+}
+.yourself-content {
+  width: 100%;
+}
+.yourself-legend {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .yourself-legend {
+    margin-bottom: 3.3333333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself-legend {
+    margin-bottom: 2.1rem;
+  }
+}
+.yourself-legend h3 {
+  position: relative;
+  z-index: 3;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #27F5E7;
+}
+@media (min-width: 1200px) {
+  .yourself-legend h3 {
+    padding-right: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself-legend h3 {
+    padding-right: 50px;
+  }
+}
+.yourself-legend div {
+  position: absolute;
+  width: 100%;
+  background: #080707;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 1200px) {
+  .yourself-legend div {
+    height: 0.0694444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself-legend div {
+    height: 1px;
+  }
+}
+.yourself-list li {
+  list-style: none;
+}
+@media (min-width: 1200px) {
+  .yourself-list li {
+    display: grid;
+    grid-template-columns: 51.5972222222vw 1fr;
+    grid-gap: 9.0277777778vw;
+    align-items: center;
+  }
+}
+.yourself-list li div {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .yourself-list li:not(:last-child) {
+    margin-bottom: 1.6666666667vw;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself-list li:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+.yourself-list span {
+  display: block;
+  font-family: "Gotham";
+  color: #080707;
+  font-weight: 400;
+  font-weight: bold;
+}
+@media (min-width: 1200px) {
+  .yourself-list span {
+    font-size: 1.25vw;
+    line-height: 2.0833333333vw;
+    letter-spacing: -1%;
+  }
+}
+@media (max-width: 1200px) {
+  .yourself-list span {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.it_works {
+  background: rgba(39, 245, 231, 0.2);
+}
+@media (min-width: 1200px) {
+  .it_works {
+    padding: 5.5555555556vw 3.4722222222vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works {
+    padding: 60px 3%;
+  }
+}
+.it_works-container {
+  width: 100%;
+  background: #27F5E7;
+}
+@media (min-width: 1200px) {
+  .it_works-container {
+    padding: 8.3333333333vw 5.5555555556vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works-container {
+    padding: 100px 60px;
+  }
+}
+.it_works h2 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .it_works h2 {
+    font-size: 2.7777777778vw;
+    line-height: 3.3333333333vw;
+    letter-spacing: 2%;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works h2 {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .it_works h2 {
+    margin-bottom: 4.8611111111vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works h2 {
+    margin-bottom: 50px;
+  }
+}
+.it_works h3 {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 1200px) {
+  .it_works h3 {
+    font-size: 2.2222222222vw;
+    line-height: 2.6388888889vw;
+    letter-spacing: 1%;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works h3 {
+    font-size: 1.7rem;
+    line-height: 38px;
+  }
+}
+.it_works p {
+  font-family: "Gotham";
+  color: #080707;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .it_works p {
+    font-size: 1.1111111111vw;
+    line-height: 1.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+.it_works-grid {
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  .it_works-grid.top {
+    display: grid;
+    grid-template-columns: 41.6666666667vw 1fr;
+    grid-gap: 3.3333333333vw;
+    align-items: center;
+    margin-bottom: 3.3333333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works-grid.top {
+    margin-bottom: 2.1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .it_works-grid.top img {
+    height: 51.25vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media (min-width: 1200px) {
+  .it_works-grid.bottom {
+    display: grid;
+    grid-template-columns: 1fr 41.6666666667vw;
+    grid-gap: 1.9444444444vw;
+    align-items: flex-end;
+    margin-top: -3.8888888889vw;
+    padding-right: 1.3888888889vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works-grid.bottom {
+    margin-top: -2rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .it_works-grid.bottom img {
+    height: 54.1666666667vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media (min-width: 1200px) {
+  .it_works-grid.bottom div {
+    padding-bottom: 6.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works-grid.bottom div {
+    padding-bottom: 70px;
+  }
+}
+.it_works-grid > * {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .it_works-grid div > *:not(:last-child) {
+    margin-bottom: 3.3333333333vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works-grid div > *:not(:last-child) {
+    margin-bottom: 2.1rem;
+  }
+}
+.it_works-banner {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 1200px) {
+  .it_works-banner {
+    height: 41.6666666667vw;
+  }
+}
+@media (max-width: 1200px) {
+  .it_works-banner {
+    height: 500px;
+  }
+}
+
 .contact {
   background: #ffffff;
 }

@@ -555,13 +555,13 @@
         @include m.laptop{
             border-radius: 3px;
         }
-
         &-dot{
             position: absolute;
             @include m.centerY;
             left: 0;
             @extend %pag;
             background: v.$primary;
+            @include m.transition;
 
             @media (min-width: v.$laptop){
                 max-width: m.px-to-vw(160px);
@@ -600,15 +600,265 @@
         .clothe:nth-child(2){
             @extend %actived;
         }
+        .pagination-dot{
+            @media (min-width: v.$laptop){
+                left: m.px-to-vw(450px);
+            }
+            @include m.laptop{
+                
+            }
+        }
     }
     [data-state="3"]{
         .clothe:nth-child(3){
             @extend %actived;
+        }
+        .pagination-dot{
+            @media (min-width: v.$laptop){
+                left: m.px-to-vw(670px);
+            }
+            @include m.laptop{
+                
+            }
         }
     }
     [data-state="4"]{
         .clothe:nth-child(4){
             @extend %actived;
         }
+        .pagination-dot{
+            @media (min-width: v.$laptop){
+                left: calc(100% - m.px-to-vw(160px));
+            }
+            @include m.laptop{
+                left: calc(100% - 100px);
+            }
+        }
+    }
+}
+
+.yourself{
+    @include m.pblock150;
+    background: v.$skyblue;
+    position: relative;
+    h2{
+        @include m.h2;
+        @include m.mb70;
+    }
+    .absolute{
+        display: block;
+        @include m.centerXY;
+        width: 100%;
+        pointer-events: none;
+        z-index: 2;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(373.86px);
+        }
+        @include m.laptop{
+            max-width: 300px;
+        }
+    }
+    .container{
+        position: relative;
+        z-index: 3;
+    }
+    h3{
+        @include m.h4;
+    }
+    p{
+        @include m.subheadingP2;
+    }
+    .mb60{
+        @media (min-width: v.$laptop){
+            margin-bottom: m.px-to-vw(60px);
+        }
+        @include m.laptop{
+            margin-bottom: 42px;
+        }
+    }
+    &-content{
+        width: 100%;
+    }
+    &-legend{
+        position: relative;
+        @media (min-width: v.$laptop){
+            margin-bottom: m.px-to-vw(48px);
+        }
+        @include m.laptop{
+            margin-bottom: 2.1rem;
+        }
+        h3{
+            position: relative;
+            z-index: 3;
+            width: fit-content;
+            @media (min-width: v.$laptop){
+                padding-right: m.px-to-vw(70px);
+            }
+            @include m.laptop{
+                padding-right: 50px;
+            }
+            background: v.$skyblue;
+        }
+        div{
+            position: absolute;
+            width: 100%;
+            background: v.$primary;
+            @include m.centerY;
+            @media (min-width: v.$laptop){
+                height: m.px-to-vw(1px);
+            }
+            @include m.laptop{
+                height: 1px;
+            }
+        }
+    }
+    &-list{
+        li{
+            list-style: none;
+            @media (min-width: v.$laptop){
+                display: grid;
+                grid-template-columns: m.px-to-vw(743px) 1fr;
+                grid-gap: m.px-to-vw(130px);
+                align-items: center;
+            }
+            @include m.laptop{
+                
+            }
+            div{
+                width: 100%;
+            }
+            &:not(:last-child){
+                @media (min-width: v.$laptop){
+                    margin-bottom: m.px-to-vw(24px);
+                }
+                @include m.laptop{
+                    margin-bottom: 18px;
+                }
+            }
+        }
+        span{
+            display: block;
+            @include m.subheadingP1;
+            font-weight: bold;
+        }
+    }
+}
+
+.it_works{
+    background: rgba($color: v.$skyblue, $alpha: 0.2);
+    @media (min-width: v.$laptop){
+        padding: m.px-to-vw(80px) m.px-to-vw(50px);
+    }
+    @include m.laptop{
+        padding: 60px 3%;
+    }
+    &-container{
+        width: 100%;
+        background: v.$skyblue;
+        @media (min-width: v.$laptop){
+            padding: m.px-to-vw(120px) m.px-to-vw(80px);
+        }
+        @include m.laptop{
+            padding: 100px 60px;
+        }
+    }
+    h2{
+        @include m.h2center;
+    }
+    h3{
+        @include m.h3;
+        letter-spacing: .5px;
+    }
+    p{
+        @include m.subheadingP2;
+    }
+    &-grid{
+        position: relative;
+        z-index: 2;
+        &.top{
+            @media (min-width: v.$laptop){
+                display: grid;
+                grid-template-columns: m.px-to-vw(600px) 1fr;
+                grid-gap: m.px-to-vw(48px);
+                align-items: center;
+    
+                margin-bottom: m.px-to-vw(48px);
+            }
+            @include m.laptop{
+                margin-bottom: 2.1rem;
+            }
+
+            img{
+                @media (min-width: v.$laptop){
+                    height: m.px-to-vw(738px);
+                    object-fit: cover;
+                    object-position: center;
+                }
+                @include m.laptop{
+                 
+                }
+            }
+        }
+        &.bottom{
+            @media (min-width: v.$laptop){
+                display: grid;
+                grid-template-columns: 1fr m.px-to-vw(600px);
+                grid-gap: m.px-to-vw(28px);
+                align-items: flex-end;
+
+                margin-top: m.px-to-vw(-56px);
+                padding-right: m.px-to-vw(20px);
+            }
+            @include m.laptop{
+                margin-top: -2rem;
+                padding-right: 1rem;
+            }
+
+            img{
+                @media (min-width: v.$laptop){
+                    height: m.px-to-vw(780px);
+                    object-fit: cover;
+                    object-position: center;
+                }
+                @include m.laptop{
+                    
+                }
+            }
+            div{
+                @media (min-width: v.$laptop){
+                    padding-bottom: m.px-to-vw(100px);
+                }
+                @include m.laptop{
+                    padding-bottom: 70px;
+                }
+            }
+        }
+
+        &>*{
+            width: 100%;
+        }
+        div{
+            &>*{
+                &:not(:last-child){
+                    @media (min-width: v.$laptop){
+                        margin-bottom: m.px-to-vw(48px);
+                    }
+                    @include m.laptop{
+                        margin-bottom: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+    &-banner{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            height: m.px-to-vw(600px);
+        }
+        @include m.laptop{
+            height: 500px;
+        }
+        object-fit: cover;
+        object-position: center;
     }
 }

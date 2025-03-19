@@ -52,7 +52,9 @@ get_header();
             <p>Because it is a mix of yellow, the primary warm colour, and blue, the primary cool colour.</p>
         </div>
         <div class="clothes_body" data-state="1">
-            <div class="pagination"><div class="pagination-dot"></div></div>
+            <div class="pagination">
+                <div class="pagination-dot"></div>
+            </div>
             <div class="clothes-box">
                 <div class="clothe" data-nro="1">
                     <div class="clothe_image">
@@ -100,26 +102,49 @@ get_header();
     </div>
 </section>
 
+<section class="it_works">
+    <div class="it_works-container">
+        <h2>Here is how it works</h2>
+        <div class="it_works-grid top">
+            <img src="<?php echo IMG; ?>/23.jpg">
+            <div>
+                <h3>With a makeup free face and using natural light in my studio, we start by determining your seasonal palette. </h3>
+                <p>Together we go through around 150 different coloured drapes to see the effect of each next to your skin. I find if you are warm or cool, soft or bright by analysing the effect various colours have on your jawline, your overall skin texture, your eye sockets, and any shadowing, sculpting, or filtering effect the colours have on your face.</p>
+                <p>After one session you will be confident and fluent in which shades suit you best. We find the seasonal palette from which you will build a cohesive wardrobe. Within your palette, I will find your sub palette, and the within that, your WOW colours… the ones that when placed near your face make you look fresh, vibrant, and glowing. Your WOW colours are where we concentrate capital in your wardrobe portfolio. </p>
+            </div>
+        </div>
+        <img src="<?php echo IMG; ?>/24.jpg" class="it_works-banner">
+        <div class="it_works-grid bottom">
+            <div>
+                <h3>The next step is to assess your inherent style</h3>
+                <p>Your body structure, your face shape, your personality, your decisiveness, how rational or intuitive you are, how introverted or extroverted you are, your interests when you were 10 years old before the world placed expectations on you, and a host of other components, all make your style uniquely yours. </p>
+                <p>We peel back the layers of the onion and determine what your style archetype is at your core, to make the outside (your wardrobe) and the inside (your intrinsic style) harmonious, authentic, and aligned. I’ll ask you to bring to your appointment (if possible) some clothes that you love and wear a lot as well as some ones that you love but don’t seem to wear, so we can find your personal thread of style running through them. If you aren’t able to bring in clothes, have some photos ready on your phone of you wearing your favourites.</p>
+            </div>
+            <img src="<?php echo IMG; ?>/25.jpg">
+        </div>
+    </div>
+</section>
+
 <section class="case_studies">
     <div class="container">
         <h2>Case studies</h2>
-        <?php for ($i=0; $i < 3; $i++): ?>
-        <div class="case_study">
-            <div class="case_study-info">
-                <div class="case_study-nro">
-                    <span>CASE STUDY ONE</span>
+        <?php for ($i = 0; $i < 3; $i++): ?>
+            <div class="case_study">
+                <div class="case_study-info">
+                    <div class="case_study-nro">
+                        <span>CASE STUDY ONE</span>
+                    </div>
+                    <div class="content w-100">
+                        <h3>One of my clients, Emilia, at Tier 1 US bank had a senior manager take her under her wing in the first few days when she was a grad trainee.</h3>
+                        <p>Many years later, Emilia asked her why. She was told it was because she was wearing Roger Vivier shoes (her mother had given them to her as a good luck present in her first job).</p>
+                        <p>The senior manager assumed that if she was putting that much effort in to her office appearance early on, she’d be putting that same effort into her work as well. At the time, Emilia had no idea what Roger Vivier shoes were, but her mother did!</p>
+                        <p>First impressions count. She is a living example of the Marilyn Monroe quote ‘Give a girl the right pair of shoes and she can conquer the world’.</p>
+                    </div>
                 </div>
-                <div class="content w-100">
-                    <h3>One of my clients, Emilia, at Tier 1 US bank had a senior manager take her under her wing in the first few days when she was a grad trainee.</h3>
-                    <p>Many years later, Emilia asked her why. She was told it was because she was wearing Roger Vivier shoes (her mother had given them to her as a good luck present in her first job).</p>
-                    <p>The senior manager assumed that if she was putting that much effort in to her office appearance early on, she’d be putting that same effort into her work as well. At the time, Emilia had no idea what Roger Vivier shoes were, but her mother did!</p>
-                    <p>First impressions count. She is a living example of the Marilyn Monroe quote ‘Give a girl the right pair of shoes and she can conquer the world’.</p>
+                <div class="case_study-image">
+                    <img src="<?php echo IMG; ?>/16.png">
                 </div>
             </div>
-            <div class="case_study-image">
-                <img src="<?php echo IMG; ?>/16.png">
-            </div>
-        </div>
         <?php endfor; ?>
     </div>
 </section>
@@ -164,6 +189,57 @@ get_header();
             </div>
         </div>
         <a href="#" title="Find your power">Find your power</a>
+    </div>
+</section>
+
+<section class="yourself">
+    <img src="<?php echo IMG; ?>/shadow2.svg" class="absolute">
+    <div class="container">
+        <h2>investment in yourself</h2>
+        <div class="yourself-content">
+            <div class="yourself-legend">
+                <h3>In person colour analysis and style analysis</h3>
+                <div></div>
+            </div>
+            <ul class="yourself-list mb60">
+                <li>
+                    <div>
+                        <p>Colour analysis + digital colour palette for your phone + hair and makeup colour recommendations + one month trial of curated Monthly Edit + little black book discussion</p>
+                    </div>
+                    <span>£500</span>
+                </li>
+                <li>
+                    <div>
+                        <p>Style analysis + personalised folder of your style recommendations + one month trial of curated Monthly Edit + little black book discussion</p>
+                    </div>
+                    <span>£1000</span>
+                </li>
+                <li>
+                    <div>
+                        <p>Colour and strategic style analysis + personalised folder of your style recommendations + one month trial of curated Monthly Edit + little black book discussion</p>
+                    </div>
+                    <span>£1300</span>
+                </li>
+            </ul>
+            <div class="yourself-legend">
+                <h3>Shopping trip</h3>
+                <div></div>
+            </div>
+            <ul class="yourself-list">
+                <li>
+                    <div>
+                        <p>Half day targeted shopping trip</p>
+                    </div>
+                    <span>£500</span>
+                </li>
+                <li>
+                    <div>
+                        <p>Full day targeted shopping trip</p>
+                    </div>
+                    <span>£1000</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
