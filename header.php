@@ -23,12 +23,20 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo get_bloginfo('name'); ?>" class="header_logo d-block w-100">
                     <img src="<?php echo IMG; ?>/logo.svg" title="<?php echo get_bloginfo('name'); ?>" alt="<?php echo get_bloginfo('name'); ?>" class="w-100" loading="lazy">
                 </a>
+                <?php if(!is_page('subscription-successful')): ?>
+                    <img class="toggle_menu" src="<?php echo IMG; ?>/menu-mobile.svg" data-menu="<?php echo IMG; ?>/menu-mobile.svg" data-close="<?php echo IMG; ?>/close.svg">
+                <?php endif; ?>
             </div>
         </div>
     </header>
     <?php if(!is_page('subscription-successful')): ?>
     <nav>
         <div class="header_bottom">
+            <div class="container">
+                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'header_navigation')); ?>
+            </div>
+        </div>
+        <div class="header_mobile">
             <div class="container">
                 <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'header_navigation')); ?>
             </div>

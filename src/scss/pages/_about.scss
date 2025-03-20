@@ -74,8 +74,10 @@
                 padding-bottom: 72px;
                 padding-right: 40px;
             }
-            @include m.tablet{
+            @include m.tabletlg{
                 padding-top: 40px;
+            }
+            @include m.tablet{
                 padding-bottom: 40px;
                 padding-right: 0;
             }
@@ -152,7 +154,7 @@
             @include m.grid(2, 54px);
             align-items: center;
         }
-        @include m.tablet{
+        @include m.tabletlg{
             @include m.grid(1, 2rem);
         }
 

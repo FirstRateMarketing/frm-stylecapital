@@ -10,6 +10,7 @@ import "@splidejs/splide/css";
             arrows: true,
             pagination: false,
             gap: '2.222vw',
+            speed: 2000,
             padding: {
                 left: '5.278vw',
                 right: '5.278vw',

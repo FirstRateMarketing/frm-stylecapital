@@ -100,6 +100,14 @@
         align-items: center;
 
     }
+    @include m.laptop{
+        display: grid;
+        grid-template-columns: 1fr m.px-to-vw(544.25px);
+        align-items: center;
+    }
+    @include m.tablet{
+        display: block;
+    }
     &:not(:last-child){
         @media (min-width: v.$laptop){
             padding-bottom: m.px-to-vw(32px);

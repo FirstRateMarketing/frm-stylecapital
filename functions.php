@@ -69,3 +69,29 @@ add_action('init', 'register_my_menus');
 
 //modulo de redes - get option
 // require_once get_template_directory().'/inc/modules/information_module.php';
+
+// set membership levels for selector
+function pmpro_membership_levels_dropdown() {
+    // Obtener los niveles de membresía activos
+    $levels = pmpro_getAllLevels(true, true);
+
+    if (empty($levels)) {
+        return '<p>No hay niveles de membresía disponibles.</p>';
+    }
+
+    // Construir el <select>
+    $output = '<select name="membership_level" id="membership_level">';
+    $output .= '<option value="" disabled selected>Select your palette</option>';
+    
+    foreach ($levels as $level) {
+        $output .= '<option value="' . esc_attr($level->id) . '">' . esc_html($level->name) . '</option>';
+    }
+
+    $output .= '</select>';
+
+    return $output;
+}
+
+// Registrar el shortcode
+add_shortcode('pmpro_membership_levels_select', 'pmpro_membership_levels_dropdown');
+

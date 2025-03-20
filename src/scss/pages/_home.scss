@@ -403,6 +403,43 @@
     }
     &-body{
         width: 100%;
+        text-align: center;
+        div {
+            @include m.subheadingP2(v.$primary);
+            background: rgba(8, 7, 7, 0.05);
+            padding: m.px-to-vw(24px);
+            width: 100%;
+            max-width: m.px-to-vw(560px);
+            margin: auto;
+            @include m.laptop{
+                padding: 16px;
+                max-width: 560px;
+            }
+            select {
+                border: none;
+                background: transparent;
+                width: 95%;
+                margin: auto;
+                font-size: m.px-to-vw(16px);
+                @include m.laptop{
+                    font-size: 16px;
+                }
+                option {
+                    font-size: m.px-to-vw(16px);
+                    @include m.laptop{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        a {
+            @include m.button;
+            margin: auto;
+            margin-top: m.px-to-vw(48px);
+            @include m.laptop{
+                margin-top: 48px;
+            }
+        }
     }
 }
 
@@ -415,7 +452,7 @@
         letter-spacing: 1%;
     }
     @include m.laptop{
-        font-size: 22px;
+        font-size: 24px;
         line-height: 29px;
     }
 }
@@ -434,6 +471,7 @@
     }
     @include m.tablet{
         width: 100%;
+        padding-block: 50px;
     }
     img{
         @include m.centerXY;
@@ -665,6 +703,9 @@
     span{
         display: block;
         @include m.h6;
+        @include m.tabletlg{
+            font-size: 20px;
+        }
     }
     p{
         @include m.subheadingP2(v.$secondary);

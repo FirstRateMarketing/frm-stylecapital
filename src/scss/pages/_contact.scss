@@ -36,7 +36,7 @@
         p{
             @include m.subheadingP2(v.$secondary);
         }
-        @include m.tablet{
+        @include m.tabletlg{
             padding-bottom: 50px;
         }
         &>*{
@@ -79,7 +79,7 @@
         @include m.laptop{
             padding: 2rem;
         }
-        @include m.tablet{
+        @include m.tabletlg{
             padding: 1rem;
             margin-bottom: 40px;
         }

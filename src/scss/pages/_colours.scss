@@ -25,6 +25,9 @@
             
             padding-bottom: 40px;
         }
+        @include m.tablet{
+            overflow: hidden;
+        }
 
         &>*{
             @media (min-width: v.$laptop){
@@ -81,6 +84,9 @@
     }
     @include m.tabletlg{
         padding-block: 100px 50px;
+    }
+    @include m.tablet{
+        padding-block: 80px 20px;
     }
 
     h2{
@@ -274,6 +280,9 @@
     @include m.tabletlg{
         padding-top: 100px;
     }
+    @include m.tablet{
+        padding-top: 80px;
+    }
     h2{
         @include m.h2center;
     }
@@ -317,6 +326,9 @@
                 @include m.flex(space-between, 2rem);
                 flex-wrap: nowrap;
             }
+            @include m.tablet{
+                padding-bottom: 0 !important;
+            }
 
             h3{
                 @include m.h4;
@@ -340,6 +352,9 @@
 
 .open_to_you{
     @include m.pblock200;
+    @include m.tablet{
+        padding-block: 80px;
+    }
     a{
         @include m.button;
         margin-inline: auto;
@@ -386,8 +401,17 @@
             @include m.grid(2, 0);
             align-items: center;
         }
+        @include m.tablet{
+            @include m.grid(1, 2rem);
+        }
         &>*{
             width: 100%;
+        }
+        img {
+            @include m.tabletlg{
+                height: 100%;
+                object-fit: cover;
+             }
         }
     }
     &-list{
@@ -396,6 +420,9 @@
         }
         @include m.laptop{
             padding-left: 2rem;
+        }
+        @include m.tablet{
+            padding-left: 0;
         }
         p{
             @include m.subheadingP1(v.$secondary);
@@ -429,6 +456,9 @@
     }
     @include m.tabletlg{
         width: calc(50% - 20px);
+    }
+    @include m.tabletlg{
+        flex: 0 0 calc(50% - 5px);
     }
 
     @include m.transition;
@@ -600,6 +630,11 @@
         }
         @include m.laptop{
             @include m.flex(center, 12px);
+        }
+        @include m.tabletlg{
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            justify-content: left;
         }
     }
     h3{
@@ -779,6 +814,9 @@
         @include m.laptop{
             padding: 100px 60px;
         }
+        @include m.tablet{
+            padding: 50px 20px;
+        }
     }
     h2{
         @include m.h2center;
@@ -802,8 +840,19 @@
     
                 margin-bottom: m.px-to-vw(48px);
             }
+            @include m.tabletlg{
+                display: grid;
+                grid-template-columns: m.px-to-vw(600px) 1fr;
+                grid-gap: m.px-to-vw(48px);
+                align-items: center;
+    
+                margin-bottom: m.px-to-vw(48px);
+            }
             @include m.laptop{
                 margin-bottom: 2.1rem;
+            }
+            @include m.tablet{
+               display: block;
             }
 
             img{
@@ -811,6 +860,10 @@
                     height: m.px-to-vw(738px);
                     object-fit: cover;
                     object-position: center;
+                }
+                @include m.laptop{
+                    height: 100%;
+                    object-fit: cover;
                 }
                 @include m.tabletlg{
                     margin-bottom: 40px;
@@ -823,18 +876,22 @@
                 grid-template-columns: 1fr m.px-to-vw(600px);
                 grid-gap: m.px-to-vw(28px);
                 align-items: flex-end;
-
                 margin-top: m.px-to-vw(-56px);
                 padding-right: m.px-to-vw(20px);
             }
-            @include m.laptop{
-                margin-top: -2rem;
-                padding-right: 1rem;
-            }
 
-            @include m.tabletlg{
+            @include m.laptop{
                 margin-top: 40px;
+                display: grid;
+                grid-template-columns: 1fr m.px-to-vw(600px);
+                grid-gap: m.px-to-vw(28px);
+                align-items: flex-end;
+                margin-top: m.px-to-vw(50px);
+                padding-right: 0;
             }
+            @include m.tablet{
+                display: block;
+             }
             img{
                 @media (min-width: v.$laptop){
                     height: m.px-to-vw(780px);
@@ -842,7 +899,8 @@
                     object-position: center;
                 }
                 @include m.laptop{
-                    
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
             div{
@@ -850,7 +908,11 @@
                     padding-bottom: m.px-to-vw(100px);
                 }
                 @include m.laptop{
-                    padding-bottom: 70px;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
+                @include m.tablet{
+                    padding-bottom: 30px;
                 }
             }
         }

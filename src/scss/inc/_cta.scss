@@ -12,7 +12,11 @@
             grid-template-columns: m.px-to-vw(230px) 1fr m.px-to-vw(230px);
         }
         @include m.laptop{
-         
+            display: grid;
+            grid-template-columns: m.px-to-vw(230px) 1fr m.px-to-vw(230px);
+        }
+        @include m.tablet{
+            display: block;
         }
         &>*{
             width: 100%;

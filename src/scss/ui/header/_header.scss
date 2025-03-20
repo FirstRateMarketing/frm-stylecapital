@@ -16,6 +16,27 @@
         @include m.laptop{
             padding-block: 2.5rem;
         }
+        @include m.tablet{
+            padding-block: 2rem;
+        }
+        .container {
+            @include m.tablet{
+                @include m.flex(center, 8px);
+            }
+        }
+        a {
+            @include m.tablet{
+                width: 80%;
+            }
+        }
+        .toggle_menu {
+            display: none;
+            height: 30px;
+            cursor: pointer;
+            @include m.tablet{
+                display: block;
+            }
+        }
     }
     &_logo{
         width: 100%;
@@ -35,6 +56,9 @@
         @include m.laptop{
             border-block: 1px solid rgba($color: v.$black, $alpha: 0.04);
             padding-block: 6px;
+        }
+        @include m.tablet{
+            display: none;
         }
 
         ul{
@@ -64,6 +88,24 @@
             a{
                 color: v.$red;
             }
+        }
+    }
+    &_mobile {
+        @extend .header_bottom;
+        opacity: 0;
+        display: block;
+        visibility: hidden;
+        transition: opacity 0.25s ease-in-out;
+        position: fixed;
+
+        background: white;
+        width: 100%;
+        ul {
+            display: block;
+        }
+        &.active {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

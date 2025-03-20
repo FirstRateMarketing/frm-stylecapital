@@ -6,7 +6,7 @@
         padding-block: m.px-to-vw(200px);
     }
     @include m.laptop{
-        padding-block: 160px;
+        padding-block: 100px;
     }
     @include m.tablet{
         padding-block: 80px;
