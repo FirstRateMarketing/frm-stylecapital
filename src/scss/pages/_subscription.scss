@@ -1,0 +1,72 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.pmpro-checkout {
+    h2.wp-block-heading {
+        @include m.h2;
+        padding-block: m.px-to-vw(50px) m.px-to-vw(60px);
+        @include m.laptop{
+            padding-block: 50px 60px;
+        }
+        @include m.tablet{
+            padding-block: 30px 40px;
+        }
+    }
+    #pmpro_form {
+        max-width: m.px-to-vw(560px);
+        margin: auto;
+        @include m.subheadingP2(v.$secondary);
+        @include m.laptop{
+            max-width: 80%;
+        }
+        @include m.tablet{
+            max-width: 100%;
+            margin: 0 20px;
+        }
+        #pmpro_billing_address_fields {
+            min-inline-size: 100% !important;
+            .pmpro_cols-2 > *, .pmpro_cols-3 > * {
+                width: 100% !important;
+            }
+        }
+
+        input,
+        select {
+            background: v.$input;
+            border-radius: 0;
+            border: none;
+            outline: none;
+        }
+        
+        #pmpro_submit_span {
+            width: 100%;
+            input {
+                @include m.button;
+                background: v.$primary;
+                color: v.$white;
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+        .pmpro_card,
+        .pmpro_card_content,
+        .pmpro_card_title {
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+    }
+    .go_back_btn {
+        @extend #pmpro_form;
+        @include m.subheadingP2(v.$secondary);
+    }
+    .pmpro_card {
+        box-shadow: none;
+    }
+    .btn-back {
+        display: none;
+    }
+    .pmpro_section.pmpro_checkout_gateway-none {
+        margin-bottom: 0;
+    }
+}

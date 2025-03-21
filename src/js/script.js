@@ -59,4 +59,26 @@ import "@splidejs/splide/css";
         })
     }
 
+    // ------------------------------------------------------------
+
+    let select = document.getElementById("bcountry");
+
+    if (select) {
+        const allowedCountries = [
+            { code: "GB", name: "United Kingdom" },
+            { code: "US", name: "United States" },
+            { code: "DE", name: "Germany" },
+            { code: "IT", name: "Italy" },
+            { code: "FR", name: "France" }
+        ];
+        select.innerHTML = "";
+
+        allowedCountries.forEach(country => {
+            let option = document.createElement("option");
+            option.value = country.code;
+            option.textContent = country.name;
+            select.appendChild(option);
+        });
+    }
+
 })();

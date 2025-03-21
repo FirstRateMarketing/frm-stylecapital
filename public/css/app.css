@@ -1164,7 +1164,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .monthly_edit {
-  background: #F2F0ED;
+  background: #f2f0ed;
 }
 .monthly_edit-head {
   width: 100%;
@@ -1601,7 +1601,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .colours_content[data-state="3"] .tab:nth-child(3), .colours_content[data-state="2"] .tab:nth-child(2), .colours_content[data-state="1"] .tab:nth-child(1) {
-  background: #F2F0ED;
+  background: #f2f0ed;
 }
 @media (min-width: 1200px) {
   .colours_content[data-state="3"] .tab:nth-child(3), .colours_content[data-state="2"] .tab:nth-child(2), .colours_content[data-state="1"] .tab:nth-child(1) {
@@ -2187,7 +2187,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .hero_consulting {
-  background: #F2F0ED;
+  background: #f2f0ed;
 }
 @media (min-width: 1200px) {
   .hero_consulting {
@@ -2498,7 +2498,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero_corporate {
-  background: #F2F0ED;
+  background: #f2f0ed;
 }
 @media (min-width: 1200px) {
   .hero_corporate {
@@ -2724,7 +2724,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero_colours {
-  background: #F2F0ED;
+  background: #f2f0ed;
 }
 .hero_colours h1 {
   color: #080707;
@@ -3820,7 +3820,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .clothes_footer {
-  background: #F2F0ED;
+  background: #f2f0ed;
 }
 @media (min-width: 1200px) {
   .clothes_footer {
@@ -4834,6 +4834,151 @@ h1, h2, h3, h4, h5, h6 {
 .gform_footer [type=submit]:is(:hover, :focus) {
   background: #080707 !important;
   color: #ffffff !important;
+}
+
+.pmpro-checkout h2.wp-block-heading {
+  color: #080707;
+  font-family: "SailingClub";
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-block: 3.4722222222vw 4.1666666667vw;
+}
+@media (min-width: 1200px) {
+  .pmpro-checkout h2.wp-block-heading {
+    font-size: 2.7777777778vw;
+    line-height: 3.3333333333vw;
+    letter-spacing: 2%;
+  }
+}
+@media (max-width: 1200px) {
+  .pmpro-checkout h2.wp-block-heading {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+@media (max-width: 1200px) {
+  .pmpro-checkout h2.wp-block-heading {
+    padding-block: 50px 60px;
+  }
+}
+@media (max-width: 768px) {
+  .pmpro-checkout h2.wp-block-heading {
+    padding-block: 30px 40px;
+  }
+}
+.pmpro-checkout #pmpro_form, .pmpro-checkout .go_back_btn {
+  max-width: 38.8888888889vw;
+  margin: auto;
+  font-family: "Gotham";
+  color: #504F4F;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .pmpro-checkout #pmpro_form, .pmpro-checkout .go_back_btn {
+    font-size: 1.1111111111vw;
+    line-height: 1.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .pmpro-checkout #pmpro_form, .pmpro-checkout .go_back_btn {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1200px) {
+  .pmpro-checkout #pmpro_form, .pmpro-checkout .go_back_btn {
+    max-width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .pmpro-checkout #pmpro_form, .pmpro-checkout .go_back_btn {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+}
+.pmpro-checkout #pmpro_form #pmpro_billing_address_fields, .pmpro-checkout .go_back_btn #pmpro_billing_address_fields {
+  min-inline-size: 100% !important;
+}
+.pmpro-checkout #pmpro_form #pmpro_billing_address_fields .pmpro_cols-2 > *, .pmpro-checkout .go_back_btn #pmpro_billing_address_fields .pmpro_cols-2 > *, .pmpro-checkout #pmpro_form #pmpro_billing_address_fields .pmpro_cols-3 > *, .pmpro-checkout .go_back_btn #pmpro_billing_address_fields .pmpro_cols-3 > * {
+  width: 100% !important;
+}
+.pmpro-checkout #pmpro_form input, .pmpro-checkout .go_back_btn input,
+.pmpro-checkout #pmpro_form select,
+.pmpro-checkout .go_back_btn select {
+  background: rgba(8, 7, 7, 0.031372549);
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+.pmpro-checkout #pmpro_form #pmpro_submit_span, .pmpro-checkout .go_back_btn #pmpro_submit_span {
+  width: 100%;
+}
+.pmpro-checkout #pmpro_form #pmpro_submit_span input, .pmpro-checkout .go_back_btn #pmpro_submit_span input {
+  color: #080707;
+  font-family: "iCielGotham";
+  font-weight: 300;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  background: #080707;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 0;
+}
+@media (min-width: 1200px) {
+  .pmpro-checkout #pmpro_form #pmpro_submit_span input, .pmpro-checkout .go_back_btn #pmpro_submit_span input {
+    border: 0.0694444444vw solid #080707;
+    font-size: 1.1111111111vw;
+    padding: 0.8333333333vw 1.25vw;
+  }
+}
+@media (max-width: 1200px) {
+  .pmpro-checkout #pmpro_form #pmpro_submit_span input, .pmpro-checkout .go_back_btn #pmpro_submit_span input {
+    border: 1px solid #080707;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+.pmpro-checkout #pmpro_form #pmpro_submit_span input:is(:hover, :focus), .pmpro-checkout .go_back_btn #pmpro_submit_span input:is(:hover, :focus) {
+  background: #080707;
+  color: #ffffff;
+}
+.pmpro-checkout #pmpro_form .pmpro_card, .pmpro-checkout .go_back_btn .pmpro_card,
+.pmpro-checkout #pmpro_form .pmpro_card_content,
+.pmpro-checkout .go_back_btn .pmpro_card_content,
+.pmpro-checkout #pmpro_form .pmpro_card_title,
+.pmpro-checkout .go_back_btn .pmpro_card_title {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.pmpro-checkout .go_back_btn {
+  font-family: "Gotham";
+  color: #504F4F;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .pmpro-checkout .go_back_btn {
+    font-size: 1.1111111111vw;
+    line-height: 1.9444444444vw;
+  }
+}
+@media (max-width: 1200px) {
+  .pmpro-checkout .go_back_btn {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+.pmpro-checkout .pmpro_card {
+  box-shadow: none;
+}
+.pmpro-checkout .btn-back {
+  display: none;
+}
+.pmpro-checkout .pmpro_section.pmpro_checkout_gateway-none {
+  margin-bottom: 0;
 }
 
 .header, nav {
