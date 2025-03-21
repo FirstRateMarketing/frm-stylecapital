@@ -70,7 +70,7 @@ add_action('init', 'register_my_menus');
 //modulo de redes - get option
 // require_once get_template_directory().'/inc/modules/information_module.php';
 
-// set membership levels for selector
+// set paid membership pro levels for selector
 function pmpro_membership_levels_dropdown() {
     $levels = pmpro_getAllLevels(true, true);
 
