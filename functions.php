@@ -72,26 +72,39 @@ add_action('init', 'register_my_menus');
 
 // set membership levels for selector
 function pmpro_membership_levels_dropdown() {
-    // Obtener los niveles de membresía activos
     $levels = pmpro_getAllLevels(true, true);
 
     if (empty($levels)) {
-        return '<p>No hay niveles de membresía disponibles.</p>';
+        return '';
     }
 
-    // Construir el <select>
-    $output = '<select name="membership_level" id="membership_level">';
-    $output .= '<option value="" disabled selected>Select your palette</option>';
+    $output = '<form id="membership-form" method="GET" action="' . esc_url(home_url('/subscription-payment/')) . '">';
+    $output .= '<div>';
+    $output .= '<select name="pmpro_level" id="membership_level">';
+    $output .= '<option value="">Select your palette</option>';
     
     foreach ($levels as $level) {
         $output .= '<option value="' . esc_attr($level->id) . '">' . esc_html($level->name) . '</option>';
     }
 
     $output .= '</select>';
+    $output .= '</div>';
+
+    $output .= '<button type="submit" id="subscribe_button" disabled>Subscribe Now</button>';
+    $output .= '</form>';
+
+    $output .= '<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const select = document.getElementById("membership_level");
+            const button = document.getElementById("subscribe_button");
+
+            select.addEventListener("change", function() {
+                button.disabled = !select.value;
+            });
+        });
+    </script>';
 
     return $output;
 }
 
-// Registrar el shortcode
 add_shortcode('pmpro_membership_levels_select', 'pmpro_membership_levels_dropdown');
-

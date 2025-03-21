@@ -145,10 +145,7 @@ get_header();
             <p>Subscribe for <b>£100/month</b> and receive a curated selection of fashion and accessories, exclusive deals, and invitations to both online and in-person community events tailored to your season.</p>
         </div>
         <div class="monthly_edit-body">
-            <div>
-                <?php echo do_shortcode( '[pmpro_membership_levels_select]' ); ?>
-            </div>
-            <a href="#">SUBSCRIBE NOW</a>
+            <?php echo do_shortcode( '[pmpro_membership_levels_select]' ); ?>
         </div>
     </div>
 </section>

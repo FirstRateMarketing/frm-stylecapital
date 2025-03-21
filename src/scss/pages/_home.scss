@@ -432,7 +432,7 @@
                 }
             }
         }
-        a {
+        button {
             @include m.button;
             margin: auto;
             margin-top: m.px-to-vw(48px);
