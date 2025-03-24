@@ -17,6 +17,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'GothamM';
+    src: url(../../fonts/Gotham/GothamMedium.otf);
+    font-display: swap;
+}
+
 $sailing: 'SailingClub';
 $iciel: 'iCielGotham';
 $gotham: 'Gotham';
@@ -27,7 +33,7 @@ $phone: 480px;
 $tablet: 768px;
 $tabletlg: 942px;
 $notebook: 1024px;
-$laptop: 1200px;
+$laptop: 1100px; //1200px
 $desktop: 1400px;
 $pc: 1680px;
 $tv: 1900px;

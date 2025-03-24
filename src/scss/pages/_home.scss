@@ -404,28 +404,50 @@
     &-body{
         width: 100%;
         text-align: center;
+
+        form{
+            width: 100%;
+            margin-inline: auto;
+            @media (min-width: v.$laptop){
+                max-width: m.px-to-vw(560px);
+            }
+            @include m.laptop{
+                max-width: 500px;
+            }
+        }
+
         div {
             @include m.subheadingP2(v.$primary);
             background: rgba(8, 7, 7, 0.05);
-            padding: m.px-to-vw(24px);
             width: 100%;
-            max-width: m.px-to-vw(560px);
             margin: auto;
+            @include m.flex(flex-start, 0);
+            @media (min-width: v.$laptop){
+                height: m.px-to-vw(60px);
+            }
             @include m.laptop{
-                padding: 16px;
-                max-width: 560px;
+                height: 52px;
             }
             select {
+                font-family: v.$gotham;
                 border: none;
                 background: transparent;
-                width: 95%;
-                margin: auto;
-                font-size: m.px-to-vw(16px);
+                margin: 0;
+                @media (min-width: v.$laptop){
+                    font-size: m.px-to-vw(16px);
+                    padding-inline: m.px-to-vw(24px) 0;
+                    width: calc(100% - m.px-to-vw(24px));
+                }
                 @include m.laptop{
                     font-size: 16px;
+                    padding-inline: 18px 0;
+                    width: calc(100% - 18px);
                 }
-                option {
-                    font-size: m.px-to-vw(16px);
+                height: 100%;
+                option{
+                    @media (min-width: v.$laptop){
+                        font-size: m.px-to-vw(16px);
+                    }
                     @include m.laptop{
                         font-size: 16px;
                     }
@@ -434,10 +456,12 @@
         }
         button {
             @include m.button;
-            margin: auto;
-            margin-top: m.px-to-vw(48px);
+            margin-inline: auto;
+            @media (min-width: v.$laptop){
+                margin-top: m.px-to-vw(48px);
+            }
             @include m.laptop{
-                margin-top: 48px;
+                margin-top: 2.1rem;
             }
         }
     }

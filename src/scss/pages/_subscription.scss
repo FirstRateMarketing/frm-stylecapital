@@ -2,27 +2,110 @@
 @use "base/variables" as v;
 
 .pmpro-checkout {
-    h2.wp-block-heading {
-        @include m.h2;
-        padding-block: m.px-to-vw(50px) m.px-to-vw(60px);
-        @include m.laptop{
-            padding-block: 50px 60px;
+    .pmpro_form_legend,
+    h2, .pmpro_card_actions, #pmpro_pricing_fields, .pmpro_message{
+        display: none;
+    }
+    .pmpro_form_field{
+        position: relative;
+        &-username,
+        &-bfirstname,
+        &-blastname,
+        &-baddress1,
+        &-baddress2,
+        &-bcity,
+        &-bstate,
+        &-bzipcode,
+        &-bphone{
+            display: none;
         }
-        @include m.tablet{
-            padding-block: 30px 40px;
+
+        img{
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            position: absolute;
+            z-index: 2;
+            @media (min-width: v.$laptop){
+                width: m.px-to-vw(80px);
+                height: m.px-to-vw(20px);
+                right: m.px-to-vw(22px);
+                bottom: m.px-to-vw(18px);
+            }
+            @include m.laptop{
+                width: 66px;
+                height: 18px;
+                right: 18px;
+                bottom: 14px;
+            }
+            object-fit: contain;
+            object-position: center;
         }
     }
-    #pmpro_form {
-        max-width: m.px-to-vw(560px);
-        margin: auto;
-        @include m.subheadingP2(v.$secondary);
+    .pmpro_form_fields{
+        @media (min-width: v.$laptop){
+            gap: m.px-to-vw(16px) !important;
+        }
         @include m.laptop{
-            max-width: 80%;
+            gap: 12px !important;
         }
-        @include m.tablet{
-            max-width: 100%;
-            margin: 0 20px;
+    }
+    #pmpro_form{
+        width: 100%;
+        @media (min-width: v.$laptop){
+            @include m.flex(center, m.px-to-vw(16px));
+            flex-direction: column;
         }
+        @include m.laptop{
+            @include m.flex(center, 12px);
+            flex-direction: column;
+        }
+
+        &>*{
+            width: 100%;
+        }
+
+        label{
+            @include m.subheadingP2;
+        }
+        .pmpro_asterisk{
+            display: none;
+        }
+        input:not([type="submit"]), select{
+            width: 100%;
+            border-radius: 0;
+            @include m.subheadingP2();
+            box-shadow: none !important;
+            border: none;
+            background: rgba($color: v.$primary, $alpha: 0.03);
+            @media (min-width: v.$laptop){
+                height: m.px-to-vw(56px);
+            }
+            @include m.laptop{
+                height: 48px;
+            }
+        }
+        input:not([type="submit"]){
+            @media (min-width: v.$laptop){
+                padding-inline: m.px-to-vw(22px);
+            }
+            @include m.laptop{
+                padding-inline: 16px;
+            }
+            &::placeholder{
+                opacity: 0.3;
+            }
+        }
+        .pmpro_form_input-error{
+            box-shadow: none !important;
+            @media (min-width: v.$laptop){
+                border-bottom: m.px-to-vw(1px) solid rgba($color: v.$red, $alpha: 0.3) !important;
+            }
+            @include m.laptop{
+                border-bottom: 1px solid rgba($color: v.$red, $alpha: 0.3) !important;
+            }
+        }
+
         #pmpro_billing_address_fields {
             min-inline-size: 100% !important;
             .pmpro_cols-2 > *, .pmpro_cols-3 > * {
@@ -30,43 +113,51 @@
             }
         }
 
-        input,
-        select {
-            background: v.$input;
-            border-radius: 0;
-            border: none;
-            outline: none;
-        }
-        
-        #pmpro_submit_span {
-            width: 100%;
-            input {
-                @include m.button;
-                background: v.$primary;
-                color: v.$white;
-                width: 100%;
-                border-radius: 0;
+        .pmpro_form_field{
+            @media (min-width: v.$laptop){
+                gap: m.px-to-vw(4px);
             }
         }
-        .pmpro_card,
-        .pmpro_card_content,
-        .pmpro_card_title {
+        .pmpro_card, .pmpro_card_content{
             background: transparent;
-            border: none;
             padding: 0;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
         }
-    }
-    .go_back_btn {
-        @extend #pmpro_form;
-        @include m.subheadingP2(v.$secondary);
-    }
-    .pmpro_card {
-        box-shadow: none;
-    }
-    .btn-back {
-        display: none;
     }
     .pmpro_section.pmpro_checkout_gateway-none {
         margin-bottom: 0;
+    }
+
+    #pmpro_billing_address_fields{
+        order: 5;
+    }
+    .pmpro_form_submit{
+        order: 6;
+        margin: 0;
+        @media (min-width: v.$laptop){
+            padding-top: m.px-to-vw(8px);
+        }
+        @include m.laptop{
+            padding-top: 5px;
+        }
+
+        &>*{
+            width: 100%;
+        }
+        #pmpro_processing_message{
+            text-align: center;
+            @include m.subheadingP3(v.$primary, v.$iciel);
+        }
+        input{
+            @include m.button;
+            background: v.$primary !important;
+            color: v.$white !important;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+        }
     }
 }

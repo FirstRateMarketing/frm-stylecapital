@@ -112,12 +112,13 @@
     @media (min-width: v.$laptop){
         font-size: px-to-vw(48px);
         line-height: px-to-vw(58px);
+        letter-spacing: px-to-vw(0.96px);
     }
     @include laptop{
+        letter-spacing: 0.96px;
         font-size: 3rem;
         line-height: 58px;    
     }
-    letter-spacing: 2%;
 }
 
 @mixin h2($color: v.$primary){
@@ -128,11 +129,12 @@
     @media (min-width: v.$laptop){
         font-size: px-to-vw(40px);
         line-height: px-to-vw(48px);
-        letter-spacing: 2%;
+        letter-spacing: px-to-vw(0.8px);
     }
     @include laptop{
         font-size: 2.25rem;
         line-height: 48px;    
+        letter-spacing: 0.8px;
     }
 }
 
@@ -145,10 +147,24 @@
     }
 }
 
-@mixin h2center{
+@mixin mb60{
+    @media (min-width: v.$laptop){
+        margin-bottom: px-to-vw(60px);
+    }
+    @include laptop{
+        margin-bottom: 40px;
+    }
+}
+
+@mixin h2center($mb: true){
     @include h2;
     text-align: center;
-    @include mb70;
+
+    @if($mb){
+        @include mb70;
+    }@else{
+        @include mb60;
+    }
 }
 
 @mixin h3($color: v.$primary){
@@ -158,11 +174,12 @@
     @media (min-width: v.$laptop){
         font-size: px-to-vw(32px);
         line-height: px-to-vw(38px);
-        letter-spacing: 1%;
+        letter-spacing: px-to-vw(0.32px);
     }
     @include laptop{
         font-size: 1.7rem;
         line-height: 38px;
+        letter-spacing: 0.32px;
     }
 }
 
@@ -173,11 +190,12 @@
     @media (min-width: v.$laptop){
         font-size: px-to-vw(30px);
         line-height: px-to-vw(36px);
-        letter-spacing: 1%;
+        letter-spacing: px-to-vw(0.32px);
     }
     @include laptop{
         font-size: 1.55rem;
         line-height: 36px;
+        letter-spacing: 0.32px;
     }
 }
 
@@ -203,11 +221,12 @@
     @media (min-width: v.$laptop){
         font-size: px-to-vw(24px);
         line-height: px-to-vw(29px);
-        letter-spacing: 2%;
+        letter-spacing: px-to-vw(0.32px);
     }
     @include laptop{
         font-size: 1.15rem;
         line-height: 29px;
+        letter-spacing: 0.32px;
     }
 }
 
@@ -234,11 +253,12 @@
     @media (min-width: v.$laptop){
         font-size: px-to-vw(16px);
         line-height: px-to-vw(19px);
-        letter-spacing: 2%;
+        letter-spacing: px-to-vw(0.32px);
     }
     @include laptop{
         font-size: 16px;
         line-height: 19px;
+        letter-spacing: 0.32px;
     }
 }
 
@@ -271,8 +291,8 @@
     }
 }
 
-@mixin subheadingP3($color: v.$primary){
-    font-family: v.$gotham;
+@mixin subheadingP3($color: v.$primary, $font: v.$gotham){
+    font-family: $font;
     color: $color;
     font-weight: 400;
     @media (min-width: v.$laptop){
@@ -293,15 +313,16 @@
             border: px-to-vw(1px) solid v.$primary;
             font-size: px-to-vw(16px);
             padding: px-to-vw(12px) px-to-vw(18px);
+            letter-spacing: px-to-vw(0.32px);
         }
         @include laptop{
+            letter-spacing: 0.32px;
             border: 1px solid v.$primary;
             font-size: 16px;
             padding: 12px 18px;
         }
         font-family: v.$iciel;
         font-weight: 300;
-        letter-spacing: 2%;
         text-transform: uppercase;
         width: fit-content;
         background: transparent;
@@ -315,15 +336,16 @@
             border: px-to-vw(1px) solid v.$primary !important;
             font-size: px-to-vw(16px) !important;
             padding: px-to-vw(12px) px-to-vw(18px) !important;
+            letter-spacing: px-to-vw(0.32px) !important;
         }
         @include laptop{
             border: 1px solid v.$primary !important;
             font-size: 16px !important;
             padding: 12px 18px !important;
+            letter-spacing: 0.32px !important;
         }
         font-family: v.$iciel !important;
         font-weight: 300 !important;
-        letter-spacing: 2% !important;
         text-transform: uppercase !important;
         border-radius: 0 !important;
         width: fit-content !important;

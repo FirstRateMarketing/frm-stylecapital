@@ -1,0 +1,51 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.purchase{
+    background: v.$white;
+    min-height: 100vh;
+    @media (min-width: v.$laptop){
+        padding-block: m.px-to-vw(50px) m.px-to-vw(203px);
+    }
+    @include m.laptop{
+        padding-block: 40px 150px;
+    }
+    h1{
+        @include m.h2center(false);
+    }
+    .backTo{
+        @include m.subheadingP3(v.$secondary);
+        font-family: 'GothamM';
+        @media (min-width: v.$laptop){
+            @include m.flex(flex-start, m.px-to-vw(10px));
+            margin-bottom: m.px-to-vw(24px);
+        }
+        @include m.laptop{
+            @include m.flex(flex-start, 8px);
+            margin-bottom: 18px;
+        }
+        svg{
+            @media (min-width: v.$laptop){
+                width: m.px-to-vw(10px);
+                height: m.px-to-vw(17.143px);
+            }
+            @include m.laptop{
+                width: 9px;
+                height: 16px;
+            }
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &_box{
+        width: 100%;
+        margin-inline: auto;
+        @media (min-width: v.$laptop){
+            max-width: m.px-to-vw(560px);
+        }
+        @include m.laptop{
+            max-width: 510px;
+        }
+    }
+}

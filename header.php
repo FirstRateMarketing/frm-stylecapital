@@ -29,7 +29,7 @@
             </div>
         </div>
     </header>
-    <?php if(!is_page('subscription-successful')): ?>
+    <?php if(!is_page('subscription-successful') && !is_page('subscription-payment')): ?>
     <nav>
         <div class="header_bottom">
             <div class="container">

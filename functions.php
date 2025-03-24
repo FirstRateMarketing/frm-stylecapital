@@ -108,3 +108,23 @@ function pmpro_membership_levels_dropdown() {
 }
 
 add_shortcode('pmpro_membership_levels_select', 'pmpro_membership_levels_dropdown');
+
+
+
+
+
+
+function my_pmpro_checkout_before_submit_button() {
+    ?>
+    <script>
+
+    </script>
+    <?php
+}
+add_action('pmpro_checkout_before_submit_button', 'my_pmpro_checkout_before_submit_button');
+
+
+
+
+// Desactivar campo de confirmar email
+add_filter( 'pmpro_checkout_confirm_email', '__return_false' );

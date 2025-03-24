@@ -96,7 +96,13 @@
         display: block;
         visibility: hidden;
         transition: opacity 0.25s ease-in-out;
-        position: fixed;
+        
+        @media (min-width: v.$tablet){
+            position: fixed;
+        }
+        @include m.tablet{
+            position: absolute;
+        }
 
         background: white;
         width: 100%;
@@ -111,7 +117,12 @@
 }
 
 nav{
-    position: sticky;
+    @media (min-width: v.$tablet){
+        position: sticky;
+    }
+    @include m.tablet{
+        position: relative;
+    }
     top: 0;
     z-index: 10;
     left: 0;
