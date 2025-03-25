@@ -137,7 +137,7 @@ $number = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE
                 <div class="case_study">
                     <div class="case_study-info">
                         <div class="case_study-nro">
-                            <span>CASE STUDY <?php $n = get_row_index();
+                            <span>CASE STUDY <?php $n = intval(get_row_index()) - 1;
                                                 echo $number[$n]; ?></span>
                         </div>
                         <div class="content w-100">

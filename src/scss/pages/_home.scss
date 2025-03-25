@@ -485,17 +485,24 @@
     background: v.$skyblue;
     @media (min-width: v.$laptop){
         width: m.px-to-vw(630px);
-        padding-block: m.px-to-vw(93.5px);
+        height: m.px-to-vw(498px);
         padding-inline: m.px-to-vw(64px) m.px-to-vw(40px);
+        @include m.flex(center, 0);
+        flex-direction: column;
     }
     @include m.laptop{
-        width: 550px;
-        padding-block: 70px;
+        width: 530px;
+        height: 410px;
         padding-inline: 52px 30px;
+        @include m.flex(center, 0);
+        flex-direction: column;
     }
     @include m.tablet{
         width: 100%;
+        height: auto;
         padding-block: 50px;
+        @include m.flex(center, 0);
+        flex-direction: column;
     }
     img{
         @include m.centerXY;
