@@ -13,18 +13,28 @@ get_header();
             <div class="contact_info">
                 <div>
                     <h1>Contact us</h1>
-                    <p>We’d love to hear from you!</p>
+                    <p><?php echo get_field('description_contact') ?></p>
                 </div>
                 <div>
                     <h2>Colour and Style studio</h2>
-                    <p>8 Duke Street, W1U 3EW, London</p>
+                    <p><?php echo get_field('direction_contact') ?></p>
                 </div>
             </div>
             <div class="contact_form">
                 <?php echo do_shortcode('[gravityform id="1" title="true" ajax="true"]'); ?>
             </div>
             <div class="contact_map">
-                <img src="<?php echo IMG; ?>/map.png">
+                <?php if (!empty(get_field('image_contact'))): ?>
+                    <img
+                        src="<?php echo get_field('image_contact')['url'] ?>"
+                        title="<?php echo get_field('image_contact')['title'] ?>"
+                        alt="<?php echo get_field('image_contact')['alt'] ?>"
+                        width="<?php echo get_field('image_contact')['width'] ?>"
+                        height="<?php echo get_field('image_contact')['height'] ?>"
+                        loading="lazy">
+                <?php else: ?>
+                    <img loading="lazy" src="<?php echo IMG; ?>/map.png">
+                <?php endif; ?>
             </div>
         </div>
     </div>

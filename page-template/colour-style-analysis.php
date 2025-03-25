@@ -125,29 +125,40 @@ get_header();
     </div>
 </section>
 
-<section class="case_studies">
-    <div class="container">
-        <h2>Case studies</h2>
-        <?php for ($i = 0; $i < 3; $i++): ?>
-            <div class="case_study">
-                <div class="case_study-info">
-                    <div class="case_study-nro">
-                        <span>CASE STUDY ONE</span>
+<?php
+$number = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE'];
+?>
+
+<?php if (have_rows('case')): ?>
+    <section class="case_studies">
+        <div class="container">
+            <h2>Case studies</h2>
+            <?php while (have_rows('case')): the_row(); ?>
+                <div class="case_study">
+                    <div class="case_study-info">
+                        <div class="case_study-nro">
+                            <span>CASE STUDY <?php $n = get_row_index();
+                                                echo $number[$n]; ?></span>
+                        </div>
+                        <div class="content w-100">
+                            <h3><?php echo get_sub_field('title_case'); ?></h3>
+                            <?php echo get_sub_field('description_case'); ?>
+                        </div>
                     </div>
-                    <div class="content w-100">
-                        <h3>One of my clients, Emilia, at Tier 1 US bank had a senior manager take her under her wing in the first few days when she was a grad trainee.</h3>
-                        <p>Many years later, Emilia asked her why. She was told it was because she was wearing Roger Vivier shoes (her mother had given them to her as a good luck present in her first job).</p>
-                        <p>The senior manager assumed that if she was putting that much effort in to her office appearance early on, she’d be putting that same effort into her work as well. At the time, Emilia had no idea what Roger Vivier shoes were, but her mother did!</p>
-                        <p>First impressions count. She is a living example of the Marilyn Monroe quote ‘Give a girl the right pair of shoes and she can conquer the world’.</p>
+                    <div class="case_study-image">
+                        <img
+                            src="<?php echo get_sub_field('image_case')['url'] ?>"
+                            title="<?php echo get_sub_field('image_case')['title'] ?>"
+                            alt="<?php echo get_sub_field('image_case')['alt'] ?>"
+                            width="<?php echo get_sub_field('image_case')['width'] ?>"
+                            height="<?php echo get_sub_field('image_case')['height'] ?>"
+                            loading="lazy">
                     </div>
                 </div>
-                <div class="case_study-image">
-                    <img src="<?php echo IMG; ?>/16.png">
-                </div>
-            </div>
-        <?php endfor; ?>
-    </div>
-</section>
+            <?php endwhile; ?>
+        </div>
+    </section>
+<?php endif; ?>
 
 <section class="open_to_you">
     <div class="container">

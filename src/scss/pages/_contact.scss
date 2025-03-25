@@ -161,6 +161,7 @@
                     gap: 8px !important;
                 }
                 .gchoice {
+                    cursor: pointer;
                     @include m.tablet{
                         display: block !important;
                         width: calc(50% - 4px) !important;

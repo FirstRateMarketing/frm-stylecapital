@@ -15,15 +15,17 @@ get_header();
         <div class="hero_frontpage-image">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="<?php echo IMG; ?>/Hero.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo IMG; ?>/Hero.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo IMG; ?>/Hero.png">
-                    </div>
+                    <?php if (have_rows('images_hero')): ?>
+                        <?php while (have_rows('images_hero')): the_row(); ?>
+                            <div class="swiper-slide">
+                                <img src="<?php echo IMG; ?>/Hero.png">
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <div class="swiper-slide">
+                            <img src="<?php echo IMG; ?>/Hero.png">
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -145,7 +147,7 @@ get_header();
             <p>Subscribe for <b>£100/month</b> and receive a curated selection of fashion and accessories, exclusive deals, and invitations to both online and in-person community events tailored to your season.</p>
         </div>
         <div class="monthly_edit-body">
-            <?php echo do_shortcode( '[pmpro_membership_levels_select]' ); ?>
+            <?php echo do_shortcode('[pmpro_membership_levels_select]'); ?>
         </div>
     </div>
 </section>

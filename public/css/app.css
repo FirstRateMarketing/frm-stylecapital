@@ -541,6 +541,195 @@ video {
   color: #ffffff;
 }
 
+html:has(.loader:not(.hidden)) {
+  overflow: hidden;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.loader_animation {
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 1100px) {
+  .loader_animation {
+    width: 26.5277777778vw;
+    height: 5.1388888889vw;
+  }
+}
+@media (max-width: 1100px) {
+  .loader_animation {
+    width: 382px;
+    height: 74px;
+  }
+}
+.loader img {
+  position: absolute;
+}
+.loader img.animation1 {
+  animation: spin 2s linear infinite;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+@media (min-width: 1100px) {
+  .loader img.animation1 {
+    display: block;
+    width: 4.8611111111vw;
+    height: 4.8611111111vw;
+    aspect-ratio: 1/1;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    left: 10.8333333333vw;
+  }
+}
+@media (max-width: 1100px) {
+  .loader img.animation1 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    aspect-ratio: 1/1;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    left: 156px;
+  }
+}
+.loader img.animation1.stop {
+  animation: move-and-stop 2s ease-out forwards;
+}
+.loader img.animation2 {
+  opacity: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  animation: appear-up 0.6s ease-out 4s forwards;
+}
+@media (min-width: 1100px) {
+  .loader img.animation2 {
+    width: 10.5555555556vw;
+    height: 2.3611111111vw;
+    bottom: -5.5555555556vw;
+    left: 6.7902777778vw;
+  }
+}
+@media (max-width: 1100px) {
+  .loader img.animation2 {
+    width: 152px;
+    height: 34px;
+    bottom: -80px;
+    left: 97.78px;
+  }
+}
+.loader img.animation1, .loader img.animation2 {
+  transition: all 0.3s ease;
+}
+.loader img.animation1.hide, .loader img.animation2.hide {
+  animation: fade-out 0.5s ease forwards;
+}
+.loader img.animation1.noshow, .loader img.animation2.noshow {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.loader img.animation3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.loader img.animation3.show {
+  animation: fade-in 0.5s ease forwards;
+}
+.loader img.animation3.hide {
+  animation: fade-out 0.5s ease forwards;
+}
+.loader.hidden {
+  animation: fade-out 0.5s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 1100px) {
+  @keyframes move-and-stop {
+    0% {
+      transform: rotate(0deg);
+      left: 10.8333333333vw;
+    }
+    100% {
+      transform: rotate(360deg);
+      left: 0;
+    }
+  }
+  @keyframes appear-up {
+    0% {
+      bottom: -5.5555555556vw;
+      opacity: 0;
+    }
+    100% {
+      bottom: 1.3861111111vw;
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  @keyframes move-and-stop {
+    0% {
+      transform: rotate(0deg);
+      left: 156px;
+    }
+    100% {
+      transform: rotate(360deg);
+      left: 0;
+    }
+  }
+  @keyframes appear-up {
+    0% {
+      bottom: -80px;
+      opacity: 0;
+    }
+    100% {
+      bottom: 19.96px;
+      opacity: 1;
+    }
+  }
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -4772,6 +4961,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     gap: 8px !important;
   }
+}
+.gform_wrapper .gfield_checkbox .gchoice {
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .gform_wrapper .gfield_checkbox .gchoice {
