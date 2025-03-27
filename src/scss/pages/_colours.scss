@@ -454,11 +454,14 @@
     @media (min-width: v.$laptop){
         width: m.px-to-vw(217.3px);
     }
-    @include m.tabletlg{
-        width: calc(50% - 20px);
+    @include m.laptop{
+        width: calc(100% / 4.17);
     }
     @include m.tabletlg{
-        flex: 0 0 calc(50% - 5px);
+        width: calc(100% / 2.2);
+    }
+    @media (max-width: 550px){
+        width: 100%;
     }
 
     @include m.transition;
@@ -493,6 +496,9 @@
         @include m.laptop{
             padding-left: 1rem;
             height: 62px;
+        }
+        @include m.tabletlg{
+            opacity: 1 !important;
         }
     }
 
@@ -620,6 +626,9 @@
                 border-radius: 2px;
             }
         }
+        @include m.tabletlg{
+            display: none;
+        }
     }
     &-box{
         @include m.transition;
@@ -633,8 +642,8 @@
         }
         @include m.tabletlg{
             overflow-x: auto;
-            flex-wrap: nowrap;
-            justify-content: left;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
     h3{

@@ -1,15 +1,11 @@
 /*
-    Theme Name: FullTimeForce
+    Theme Name: Style Capital
     Theme URI:
-    Description: Tema personalizado para WordPress
-    Author: FullTimeForce
+    Description: Custom WordPress Theme
+    Author: Style Capital
     Version: 1.0
     License: GNU General Public License v2 or Later
     Tags: Wordpress
 */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}@media (max-width:768px){.loader{display:none !important;}}.monthly_edit-body select,.monthly_edit-body option{color:#000 !important;accent-color:#000 !important;}

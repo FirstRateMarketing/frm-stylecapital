@@ -10,7 +10,7 @@ get_header();
 <main class="hero hero_about">
     <div class="container">
         <div class="hero_about-banner">
-            <img src="<?php echo IMG; ?>/12.png">
+            <img src="<?php echo IMG; ?>/12.webp">
             <h1><?php echo get_field('title_banner') ?? ''; ?></h1>
         </div>
         <div class="hero_about-content">
@@ -18,7 +18,7 @@ get_header();
                 <h2><?php echo get_field('subtitle_banner') ?? ''; ?></h2>
                 <p><?php echo get_field('description_banner') ?? ''; ?></p>
             </div>
-            <img src="<?php echo IMG; ?>/14.png">
+            <img src="<?php echo IMG; ?>/14.webp">
         </div>
     </div>
 </main>
@@ -53,7 +53,7 @@ get_header();
                             height="<?php echo get_field('image_why')['height'] ?>"
                             loading="lazy">
                     <?php else: ?>
-                        <img src="<?php echo IMG; ?>/15.png" loading="lazy">
+                        <img src="<?php echo IMG; ?>/15.webp" loading="lazy">
                     <?php endif; ?>
                 </div>
             </div>

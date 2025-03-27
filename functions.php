@@ -14,6 +14,14 @@ define('IMG', URL . '/images');
 define('JS', URL . '/libraries/js');
 define('CSS', URL . '/libraries/css');
 
+function remove_jquery_frontpage() {
+    if ( is_front_page() ) {
+        wp_dequeue_script('jquery');
+        wp_deregister_script('jquery');
+    }
+}
+add_action('wp_enqueue_scripts', 'remove_jquery_frontpage', 100);
+
 if (!function_exists('general_scripts')):
     function general_scripts()
     {

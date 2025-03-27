@@ -18,12 +18,12 @@ get_header();
                     <?php if (have_rows('images_hero')): ?>
                         <?php while (have_rows('images_hero')): the_row(); ?>
                             <div class="swiper-slide">
-                                <img src="<?php echo get_sub_field('image_hero')['url'] ?>" alt="<?php echo get_sub_field('image_hero')['alt'] ?>" title="<?php echo get_sub_field('image_hero')['title'] ?>">
+                                <img src="<?php echo get_sub_field('image_hero')['url'] ?>" alt="<?php echo get_sub_field('image_hero')['alt'] ?>" title="<?php echo get_sub_field('image_hero')['title'] ?>" width="<?php echo get_sub_field('image_hero')['width'] ?>" height="<?php echo get_sub_field('image_hero')['height'] ?>" loading="lazy">
                             </div>
                         <?php endwhile; ?>
                     <?php else: ?>
                         <div class="swiper-slide">
-                            <img src="<?php echo IMG; ?>/Hero.png">
+                            <img src="<?php echo IMG; ?>/Hero.png" loading="lazy>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -37,7 +37,7 @@ get_header();
         <h2>You are your most important asset.</h2>
         <div class="most_important-grid">
             <div class="w-100">
-                <img src="<?php echo IMG; ?>/1.webp">
+                <img src="<?php echo IMG; ?>/1.webp" title="Image" alt="Image">
             </div>
             <div class="most_important-content w-100">
                 <div class="content">
@@ -45,11 +45,11 @@ get_header();
                     <p>I view building a wardrobe in the same way I view building an investment portfolio.</p>
                     <p>Correct allocation of capital is key, regardless of your budget. Whether you are an intern or a CEO, you should have strategy that fits your investment objectives.</p>
                 </div>
-                <a href="#">find your power</a>
+                <a href="<?php echo esc_url(home_url('contact')) ?>" title="find your power">find your power</a>
             </div>
         </div>
         <div class="most_important-float">
-            <img src="<?php echo IMG; ?>/2.webp">
+            <img src="<?php echo IMG; ?>/2.webp" title="Image" alt="Image">
             <div class="most_important-message content">
                 <p>Like any portfolio, it should be monitored and rebalanced as you, your body, your lifestyle, and your career evolve and change.</p>
                 <p>Strategy and discipline are the way to build a good wardrobe or a good portfolio</p>
@@ -81,13 +81,13 @@ get_header();
             </div>
             <div class="colours_images w-100">
                 <div class="image">
-                    <img src="<?php echo IMG; ?>/20.jpg">
+                    <img src="<?php echo IMG; ?>/20.webp" title="Image 1" alt="Image 1">
                 </div>
                 <div class="image">
-                    <img src="<?php echo IMG; ?>/21.jpg">
+                    <img src="<?php echo IMG; ?>/21.webp" title="Image 2" alt="Image 2">
                 </div>
                 <div class="image">
-                    <img src="<?php echo IMG; ?>/22.jpg">
+                    <img src="<?php echo IMG; ?>/22.webp" title="Image 3" alt="Image 3">
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@ get_header();
         <h2>Humans assess someone they meet in one tenth of a second and rarely pivot from that judgement.</h2>
         <div class="judgement_grid">
             <div class="w-100">
-                <img src="<?php echo IMG; ?>/3.jpg">
+                <img src="<?php echo IMG; ?>/3.webp" title="Image" alt="Image" width="853" height="1283">
             </div>
             <div class="w-100">
                 <div class="content">
@@ -112,7 +112,7 @@ get_header();
                     <h4>You can never be overdressed or overeducated</h4>
                     <p>— Oscar Wilde</p>
                 </div>
-                <a href="" title="find your power">find your power</a>
+                <a href="<?php echo esc_url(home_url('contact')) ?>" title="find your power">find your power</a>
             </div>
         </div>
     </div>
@@ -123,10 +123,10 @@ get_header();
         <h2>my role as a style strategist is to make sure every single item you buy makes Economic sense in your wardrobe portfolio.</h2>
         <div class="portfolio_grid">
             <div class="portfolio_grid-left">
-                <img src="<?php echo IMG; ?>/4.png">
+                <img src="<?php echo IMG; ?>/4.webp" title="Image" alt="Image" width="908" height="1077">
                 <div class="w-100">
                     <p>Also, we don’t wastefully discard everything you have, I make adjustments, and then make sure you stay in your palette for future purchases so everything works together easily.</p>
-                    <p>To paraphrase Maya Angelou, “When we know better, we do better” … and we invest smarter in the future. </p>
+                    <p style="color:#080707">To paraphrase Maya Angelou, “When we know better, we do better” … and we invest smarter in the future. </p>
                 </div>
             </div>
             <div class="portfolio_grid-right">
@@ -134,7 +134,7 @@ get_header();
                     <h3>You have to buy clothes, why not do it with strategy, intention, and thought?</h3>
                     <p>A good deal is not necessarily a good buy. I focus the bulk of your investment on the section of your wardrobe that you wear every day, not on what you wear to attend a wedding or other event.</p>
                 </div>
-                <img src="<?php echo IMG; ?>/5.jpg">
+                <img src="<?php echo IMG; ?>/5.webp" title="Image" alt="Image" width="943" height="1417">
             </div>
         </div>
     </div>
@@ -160,7 +160,7 @@ get_header();
             </div>
             <div class="clients_box">
                 <div class="clients_slider">
-                    <div class="splide" role="group" id="clients">
+                    <div class="splide" id="clients">
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev">
                                 <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,7 +180,7 @@ get_header();
                                 <?php while (have_rows('clients')): the_row(); ?>
                                     <li class="splide__slide">
                                         <div class="clientbox relative">
-                                            <img src="<?php echo IMG; ?>/shadow.svg" class="absolute">
+                                            <img src="<?php echo IMG; ?>/shadow.svg" class="absolute" title="Logo" alt="Logo">
                                             <div class="clientbox-span absolute">
                                                 <p><?php echo get_sub_field('tag_client') ?? ''; ?></p>
                                             </div>
@@ -211,10 +211,9 @@ get_header();
     var swiper3 = new Swiper(".mySwiper", {
         grabCursor: true,
         effect: "creative",
-        centeredSlides: true,
-        rewind: true,
+        loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: false,
         },
         creativeEffect: {

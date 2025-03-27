@@ -14,13 +14,13 @@ get_header();
             <p><?php echo get_field('description_banner'); ?></p>
         </div>
         <div class="hero_corporate-body">
-            <img src="<?php echo IMG; ?>/10.jpg">
+            <img src="<?php echo IMG; ?>/10.webp">
             <div class="hero_corporate-content">
                 <div class="content">
                     <h2><?php echo get_field('subtitle_banner'); ?></h2>
                     <p><?php echo get_field('subdescription_banner'); ?></p>
                 </div>
-                <img src="<?php echo IMG; ?>/11.png">
+                <img src="<?php echo IMG; ?>/11.webp">
             </div>
         </div>
     </div>

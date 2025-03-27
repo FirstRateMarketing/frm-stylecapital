@@ -142,7 +142,9 @@ video{
 }
 
 html:has(.loader:not(.hidden)){
-    overflow: hidden;
+    @media (min-width: v.$tablet){
+        overflow: hidden;
+    }
 }
 
 @media (min-width: v.$laptop){

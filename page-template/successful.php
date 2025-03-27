@@ -16,7 +16,7 @@ get_header();
                 <p>Each month, you'll receive a curated selection of fashion pieces, accesories, and exclusive deals tailored to your season. Keep an eye on your inbox for your first edit and event invites!</p>
                 <p>Need help? Contact us at <b>info@stylecapital.com</b></p>
             </div>
-            <a href="<?php echo esc_url(home_url('')) ?>" title="back to homepage">back to homepage</a>
+            <a href="<?php echo esc_url(home_url('/')) ?>" title="back to homepage">back to homepage</a>
         </div>
     </div>
 </div>

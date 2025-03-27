@@ -640,7 +640,7 @@
             }
         }
         p{
-            @include m.subheadingP2;
+            @include m.subheadingP2(v.$secondary);
         }
         h3{
             @include m.h3;
@@ -656,6 +656,9 @@
             img{
                 @media (min-width: v.$laptop){
                     margin-bottom: m.px-to-vw(74px);
+                    height: m.px-to-vw(997px);
+                    object-fit: cover;
+                    object-position: bottom;
                 }
                 @include m.laptop{
                     margin-bottom: 48px;
@@ -677,12 +680,22 @@
             }
         }
         &-right{
+            @media (min-width: v.$laptop){
+                padding-top: m.px-to-vw(60px);
+            }
+            @include m.laptop{
+                padding-top: 30px;
+            }
             img{
                 @media (min-width: v.$laptop){
                     position: relative;
                     z-index: 2;
                     margin-left: m.px-to-vw(-158px);
                     margin-top: m.px-to-vw(82px);
+
+                    height: m.px-to-vw(1030px);
+                    object-fit: cover;
+                    object-position: bottom;
                 }
                 @include m.laptop{
                     margin-top: 50px;
@@ -722,6 +735,9 @@
 .colours{
     @include m.tablet{
         padding-block: 0px 80px;
+    }
+    @include m.laptop{
+        overflow: hidden;
     }
     h2{
         @media (min-width: v.$laptop){
@@ -782,7 +798,12 @@
     }
     &_images{
         position: relative;
-        aspect-ratio: 1/1.01402;
+        @media (min-width: v.$laptop){
+            aspect-ratio: 1/1.01402;
+        }
+        @include m.tablet{
+            aspect-ratio: 1/1;
+        }
     }
     .image, img{
         @include m.fullWH;
@@ -806,7 +827,7 @@
         }
         @include m.laptop{
             display: grid;
-            grid-template-columns: m.px-to-vw(566px) 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
         @include m.tablet{
             display: block;

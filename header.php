@@ -20,9 +20,9 @@
     <?php if (is_front_page()): ?>
         <div class="loader">
             <div class="loader_animation">
-                <img src="<?php echo IMG; ?>/animation1.svg" class="animation1">
-                <img src="<?php echo IMG; ?>/animation2.svg" class="animation2">
-                <img src="<?php echo IMG; ?>/animation3.svg" class="animation3">
+                <img src="<?php echo IMG; ?>/animation1.svg" class="animation1" title="<?php echo get_bloginfo('name'); ?>" alt="<?php echo get_bloginfo('name'); ?>" loading="lazy">
+                <img src="<?php echo IMG; ?>/animation2.svg" class="animation2" title="<?php echo get_bloginfo('name'); ?>" alt="<?php echo get_bloginfo('name'); ?>" loading="lazy">
+                <img src="<?php echo IMG; ?>/animation3.svg" class="animation3" title="<?php echo get_bloginfo('name'); ?>" alt="<?php echo get_bloginfo('name'); ?>" loading="lazy">
             </div>
         </div>
     <?php endif; ?>
@@ -31,10 +31,10 @@
         <div class="header_top">
             <div class="container">
                 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo get_bloginfo('name'); ?>" class="header_logo d-block w-100">
-                    <img src="<?php echo IMG; ?>/logo.svg" title="<?php echo get_bloginfo('name'); ?>" alt="<?php echo get_bloginfo('name'); ?>" class="w-100" loading="lazy">
+                    <img src="<?php echo IMG; ?>/logo.svg" title="<?php echo get_bloginfo('name'); ?>" alt="<?php echo get_bloginfo('name'); ?>" class="w-100" loading="lazy" width="898" height="50">
                 </a>
                 <?php if (!is_page('subscription-successful')): ?>
-                    <img class="toggle_menu" src="<?php echo IMG; ?>/menu-mobile.svg" data-menu="<?php echo IMG; ?>/menu-mobile.svg" data-close="<?php echo IMG; ?>/close.svg">
+                    <img class="toggle_menu" src="<?php echo IMG; ?>/menu-mobile.svg" data-menu="<?php echo IMG; ?>/menu-mobile.svg" data-close="<?php echo IMG; ?>/close.svg" title="Men&uacute;" alt="Men&uacute;" width="30" height="30">
                 <?php endif; ?>
             </div>
         </div>

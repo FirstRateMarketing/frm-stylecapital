@@ -12,9 +12,9 @@ get_header();
         <h1>colour and style analysis session</h1>
     </div>
     <div class="hero_colours-image">
-        <img src="<?php echo IMG; ?>/18.png">
+        <img src="<?php echo IMG; ?>/18.webp">
     </div>
-    <img src="<?php echo IMG; ?>/19.png" class="absolute">
+    <img src="<?php echo IMG; ?>/19.webp" class="absolute">
 </main>
 
 <section class="wheel">
@@ -23,7 +23,7 @@ get_header();
             <h2>The colour wheel is divided into 4 sections</h2>
             <p>We name each section after seasons to be descriptive:</p>
         </div>
-        <img src="<?php echo IMG; ?>/colour-wheel.svg">
+        <img src="<?php echo IMG; ?>/colour-wheel.webp">
         <div class="wheel_list">
             <div>
                 <h3>Spring</h3>
@@ -58,7 +58,7 @@ get_header();
             <div class="clothes-box">
                 <div class="clothe" data-nro="1">
                     <div class="clothe_image">
-                        <img src="<?php echo IMG; ?>/clothe/1.png">
+                        <img src="<?php echo IMG; ?>/clothe/1.webp">
                     </div>
                     <div class="clothe_info">
                         <h3>Spring Green</h3>
@@ -66,7 +66,7 @@ get_header();
                 </div>
                 <div class="clothe" data-nro="2">
                     <div class="clothe_image">
-                        <img src="<?php echo IMG; ?>/clothe/2.png">
+                        <img src="<?php echo IMG; ?>/clothe/2.webp">
                     </div>
                     <div class="clothe_info">
                         <h3>Summer Green</h3>
@@ -74,7 +74,7 @@ get_header();
                 </div>
                 <div class="clothe" data-nro="3">
                     <div class="clothe_image">
-                        <img src="<?php echo IMG; ?>/clothe/3.png">
+                        <img src="<?php echo IMG; ?>/clothe/3.webp">
                     </div>
                     <div class="clothe_info">
                         <h3>Autumn Green</h3>
@@ -82,7 +82,7 @@ get_header();
                 </div>
                 <div class="clothe" data-nro="4">
                     <div class="clothe_image">
-                        <img src="<?php echo IMG; ?>/clothe/4.png">
+                        <img src="<?php echo IMG; ?>/clothe/4.webp">
                     </div>
                     <div class="clothe_info">
                         <h3>Winter Green</h3>
@@ -96,7 +96,7 @@ get_header();
             </div>
             <div>
                 <p>To apply this simple art concept to your colour analysis, your skin has either a warm or a cool undertone. It is also either bright or soft in colour.  You will look harmonious and vibrant when the ‘adjacent colour’ (the clothing near your face) matches that undertone.  </p>
-                <a href="" title="book your colour analysis">book your colour analysis</a>
+                <a href="<?php echo esc_url(home_url('contact')) ?>" title="book your colour analysis">book your colour analysis</a>
             </div>
         </div>
     </div>
@@ -199,7 +199,7 @@ $number = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE
                 </div>
             </div>
         </div>
-        <a href="#" title="Find your power">Find your power</a>
+        <a href="<?php echo esc_url(home_url('contact')) ?>" title="Find your power">Find your power</a>
     </div>
 </section>
 
@@ -366,23 +366,10 @@ $number = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE
 <script>
     jQuery(document).ready(function($) {
         $("#my-accordion").accordionjs({
-            // Allow self close.(data-close-able)
             closeAble: false,
-
-            // Close other sections.(data-close-other)
             closeOther: false,
-
-            // Animation Speed.(data-slide-speed)
             slideSpeed: 150,
-
-            // The section open on first init. A number from 1 to X or false.(data-active-index)
-            activeIndex: 100,
-
-            // Callback when a section is open
-            openSection: function(section) {},
-
-            // Callback before a section is open
-            beforeOpenSection: function(section) {},
+			activeIndex: 100,
         });
     });
 </script>

@@ -49,9 +49,13 @@ import "@splidejs/splide/css";
     let clothes = document.querySelectorAll('.clothe'),
         clotheContent = document.querySelector('.clothes_body');
 
+    var x = window.matchMedia("(max-width: 1100px)"),
+        action = 'mouseover';
+    if(x.matches){action = 'click';}
+
     if(clothes && clotheContent){
         Array.from(clothes).forEach(clothe=>{
-            clothe.addEventListener('mouseover', (e)=>{
+            clothe.addEventListener(action, (e)=>{
                 e.preventDefault();
                 let n = e.currentTarget.getAttribute('data-nro') ?? 1;
                 clotheContent.setAttribute('data-state', n);
