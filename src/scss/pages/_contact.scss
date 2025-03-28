@@ -62,7 +62,13 @@
         @include m.laptop{
             
         }
-
+        &>*{
+            &:not(:last-child){
+                @include m.laptop{
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
         &>*, img{
             width: 100%;
         }
@@ -90,8 +96,37 @@
             grid-column: span 2;
         }
         @include m.laptop{
-         
+
         }
+    }
+    #map{
+        width: 100%;
+        aspect-ratio: 16/8;
+    }
+    #cross{
+        animation: rotateOnce 10s linear infinite;
+        transform-origin: center center;
+        transform-box: content-box;
+    }
+    .markerElement{
+        svg{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
+@keyframes rotateOnce {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 

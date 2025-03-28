@@ -23,7 +23,8 @@ get_header();
             <h2>The colour wheel is divided into 4 sections</h2>
             <p>We name each section after seasons to be descriptive:</p>
         </div>
-        <img src="<?php echo IMG; ?>/colour-wheel.webp">
+        <!--<img src="<?php echo IMG; ?>/colour-wheel.webp">-->
+        <?php get_template_part('inc/sections/wheel'); ?>
         <div class="wheel_list">
             <div>
                 <h3>Spring</h3>

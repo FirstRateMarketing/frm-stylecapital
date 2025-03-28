@@ -45,7 +45,7 @@ get_header();
                     <p>I view building a wardrobe in the same way I view building an investment portfolio.</p>
                     <p>Correct allocation of capital is key, regardless of your budget. Whether you are an intern or a CEO, you should have strategy that fits your investment objectives.</p>
                 </div>
-                <a href="<?php echo esc_url(home_url('contact')) ?>" title="find your power">find your power</a>
+                <!--<a href="<?php echo esc_url(home_url('contact')) ?>" title="find your power">find your power</a>-->
             </div>
         </div>
         <div class="most_important-float">
@@ -144,7 +144,7 @@ get_header();
     <div class="container">
         <div class="monthly_edit-head">
             <h2>the style capital monthly edit</h2>
-            <p>Subscribe for <b>£100/month</b> and receive a curated selection of fashion and accessories, exclusive deals, and invitations to both online and in-person community events tailored to your season.</p>
+            <p>Subscribe for <strong>£100/month</strong> and receive a curated selection of fashion and accessories, exclusive deals, and invitations to both online and in-person community events tailored to your season.</p>
         </div>
         <div class="monthly_edit-body">
             <?php echo do_shortcode('[pmpro_membership_levels_select]'); ?>
@@ -209,21 +209,25 @@ get_header();
 
 <script>
     var swiper3 = new Swiper(".mySwiper", {
-        grabCursor: true,
         effect: "creative",
+        speed: 1500,
         loop: true,
         autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+        keyboard: {
+          enabled: false,
         },
         creativeEffect: {
-            prev: {
-                shadow: true,
-                translate: ["0%", 0, -1],
-            },
-            next: {
-                translate: ["100%", 0, 0],
-            },
+          prev: {
+            shadow: true,
+            translate: ["0%", 0, -1],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
         },
-    });
+      });
 </script>

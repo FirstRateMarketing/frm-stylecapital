@@ -56,12 +56,14 @@
             img{
                 display: block;
                 width: 100%;
-
                 @media (min-width: v.$laptop){
                     height: m.px-to-vw(720px);
                     object-fit: cover;
                     object-position: center;
                 }
+                pointer-events: none;
+                user-select: none;
+                -webkit-user-drag: none;
             }
         }
     }
@@ -96,6 +98,7 @@
         }
         @include m.tablet{
             @include m.grid(1, 0px);
+            margin-bottom: 50px;
         }
 
         img{
@@ -158,12 +161,11 @@
         img{
             display: block;
             width: 100%;
-            aspect-ratio: 1/1;
+            aspect-ratio: 1/1.00504;
             height: auto;
             object-fit: cover;
             object-position: center;
             margin-inline: auto;
-            transform: scaleX(-1);
 
             @media (min-width: v.$laptop){
                 max-width: m.px-to-vw(995px);
@@ -337,6 +339,7 @@
             @include m.tablet{
                 top: 80px;
             }
+            transition: none !important;
         }
         &__arrow{
             position: relative !important;
@@ -349,6 +352,7 @@
             font-family: v.$sailing;
             font-weight: 400;
             color: v.$primary;
+            transition: none !important;
             @media (min-width: v.$laptop){
                 @include m.flex(center, m.px-to-vw(16px));
                 font-size: m.px-to-vw(30px);
@@ -362,8 +366,16 @@
             }
             svg{
                 transform: none !important;
+                @media (min-width: v.$laptop){
+                    width: m.px-to-vw(20px) !important;
+                }
+                @include m.laptop{
+                    width: 18px !important;
+                }
+                height: auto !important;
             }
             &:disabled{
+                transition: none !important;
                 opacity: 0.5 !important;
             }
         }
@@ -395,6 +407,7 @@
             @include m.subheadingP2(v.$secondary);
             text-align: center;
             b, strong, span{
+                display: inline-block;
                 font-family: v.$iciel;
                 font-weight: 500;
                 color: v.$primary;
@@ -455,13 +468,39 @@
             }
         }
         button {
-            @include m.button;
+            @include m.button(true, v.$gray);
             margin-inline: auto;
             @media (min-width: v.$laptop){
                 margin-top: m.px-to-vw(48px);
             }
             @include m.laptop{
                 margin-top: 2.1rem;
+            }
+            position: relative;
+            &::before{
+                position: absolute;
+                content: 'Subscribe now';
+                @include m.centerXY;
+                color: v.$primary;
+                text-transform: uppercase;
+                width: 100%;
+                @include m.transition;
+                z-index: 3;
+
+                @media (min-width: v.$laptop){
+                    font-size: m.px-to-vw(16px);
+                    letter-spacing: m.px-to-vw(0.32px);
+                }
+                @include m.laptop{
+                    font-size: 16px;
+                    letter-spacing: 0.32px;
+                }
+            }
+            &:is(:hover, :focus){
+                color: v.$primary;
+                &::before{
+                    color: v.$white;
+                }
             }
         }
     }

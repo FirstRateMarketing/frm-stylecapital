@@ -163,6 +163,10 @@ html:has(.loader:not(.hidden)){
     background: v.$white;
     @include m.flex(center, 0);
 
+    @include m.tablet{
+        display: none !important;
+    }
+
     &_animation{
         overflow: hidden;
         position: relative;
@@ -227,6 +231,11 @@ html:has(.loader:not(.hidden)){
             }
         }
         &.animation3{
+            width: auto;
+            object-fit: contain;
+            height: 100%;
+            object-position: center;
+
             @include m.centerXY;
             opacity: 0;
             &.show{

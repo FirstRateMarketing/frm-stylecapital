@@ -129,9 +129,10 @@
             text-align: center;
         }
     }
-    img{
+    svg, img{
         display: block;
         width: 100%;
+        height: auto;
         @media (min-width: v.$laptop){
             max-width: m.px-to-vw(869px);
         }
@@ -905,11 +906,12 @@
                 @media (min-width: v.$laptop){
                     height: m.px-to-vw(780px);
                     object-fit: cover;
-                    object-position: center;
+                    object-position: bottom;
                 }
                 @include m.laptop{
                     height: 100%;
                     object-fit: cover;
+                    object-position: bottom;
                 }
             }
             div{

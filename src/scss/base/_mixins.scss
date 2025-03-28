@@ -305,10 +305,10 @@
     }
 }
 
-@mixin button($link: true){
+@mixin button($link: true, $color: v.$primary){
 
     @if($link){
-        color: v.$primary;
+        color: $color;
         @media (min-width: v.$laptop){
             border: px-to-vw(1px) solid v.$primary;
             font-size: px-to-vw(16px);
@@ -331,7 +331,7 @@
             color: v.$white;
         }
     }@else{
-        color: v.$primary !important;
+        color: $color !important;
         @media (min-width: v.$laptop){
             border: px-to-vw(1px) solid v.$primary !important;
             font-size: px-to-vw(16px) !important;
