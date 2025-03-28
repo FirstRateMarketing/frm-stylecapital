@@ -765,6 +765,9 @@
     @include m.laptop{
         
     }
+    @include m.tablet{
+        height: 132px;
+    }
 
     p{
         opacity: 0;
@@ -821,6 +824,11 @@
             border-bottom: 1px solid #E2E8E8;
             padding: 20px;
         }
+        @include m.tablet{
+            transition: height .5s;
+            interpolate-size: allow-keywords;
+            height: auto;
+        }
 
         &>*{
             @include m.transition;
@@ -830,9 +838,6 @@
             padding-left: m.px-to-vw(48px);
             padding-top: m.px-to-vw(48px);
             padding-right: m.px-to-vw(111px);
-        }
-        @include m.laptop{
-            
         }
     }
     &_images{
